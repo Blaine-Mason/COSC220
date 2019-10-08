@@ -1,0 +1,56 @@
+﻿Blaine Mason
+Lab-1
+
+Output 1:
+Enter an integer to be stored into an array(-1 to quit): 15
+Enter an integer to be stored into an array(-1 to quit): 13
+Enter an integer to be stored into an array(-1 to quit): 12
+Enter an integer to be stored into an array(-1 to quit): 24
+Enter an integer to be stored into an array(-1 to quit): 35
+Enter an integer to be stored into an array(-1 to quit): 46
+Enter an integer to be stored into an array(-1 to quit): 67
+Enter an integer to be stored into an array(-1 to quit): 78
+Enter an integer to be stored into an array(-1 to quit): 4
+Enter an integer to be stored into an array(-1 to quit): 355
+Enter an integer to be stored into an array(-1 to quit): 65
+Enter an integer to be stored into an array(-1 to quit): 7
+Enter an integer to be stored into an array(-1 to quit): 67
+Enter an integer to be stored into an array(-1 to quit): 889
+Enter an integer to be stored into an array(-1 to quit): 67
+Enter an integer to be stored into an array(-1 to quit): -1
+Mean: 116.267
+Mean 2: 116.267
+Arr[] Deleted
+Goodbye.
+
+Output 2:
+Enter an integer to be stored into an array(-1 to quit): 1
+Enter an integer to be stored into an array(-1 to quit): 1
+Enter an integer to be stored into an array(-1 to quit): 1
+Enter an integer to be stored into an array(-1 to quit): 1
+Enter an integer to be stored into an array(-1 to quit): 1
+Enter an integer to be stored into an array(-1 to quit): 1
+Enter an integer to be stored into an array(-1 to quit): 1
+Enter an integer to be stored into an array(-1 to quit): 1
+Enter an integer to be stored into an array(-1 to quit): 1
+Enter an integer to be stored into an array(-1 to quit): 1
+Enter an integer to be stored into an array(-1 to quit): 1
+Enter an integer to be stored into an array(-1 to quit): 1
+Enter an integer to be stored into an array(-1 to quit): 1
+Enter an integer to be stored into an array(-1 to quit): 1
+Enter an integer to be stored into an array(-1 to quit): 1
+Enter an integer to be stored into an array(-1 to quit): 1
+Enter an integer to be stored into an array(-1 to quit): 1
+Enter an integer to be stored into an array(-1 to quit): -1
+Mean: 1
+Mean 2: 1
+Arr[] Deleted
+Goodbye.
+
+Output 3:
+Enter an integer to be stored into an array(-1 to quit): -1
+Mean: -nan
+Mean 2: -nan
+Arr[] Deleted
+Goodbye.
+
