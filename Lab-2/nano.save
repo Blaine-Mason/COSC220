@@ -1,0 +1,44 @@
+#include "payroll.h"
+
+
+PayRoll::PayRoll()
+{
+	name = "no name";
+	payRate = 0.0;
+}
+PayRoll::PayRoll(string str, double rate)
+{
+	name = str;
+	payRate = rate;
+}
+/*
+ * Set the hours for this employee
+ */
+void PayRoll::setHours(double hrs)
+{
+	hours = hrs;
+}
+/*
+ * Display info about the employee
+ */
+void PayRoll::displayInfo()
+{
+	cout << "Employee: " << name << endl;
+	cout << "Total Pay: " << getPay(payRate, hours) << endl;
+}
+/*
+ * Calculate and return the total pay for
+ * this employee
+ */
+double PayRoll::getPay(double rate, double hrs) {
+	return rate * hrs;	
+}
+/*
+ * Return the name of the employee
+ */
+string PayRoll::getName()
+{
+	return name;
+}
+
+

@@ -1,0 +1,167 @@
+main.cpp:
+#include "payroll.h"
+#include <iostream>
+#include <string> //string
+
+/*
+ * Blaine Mason
+ * Lab-2
+ * This program uses a payroll class to display the memory use of regular
+ * arrays vs arrays of pointers
+ */
+
+int main(){
+	//Hard-coded creation of the payroll objects which hold a name and payrate.
+	PayRoll payroll[7];
+	PayRoll p1 = PayRoll("Blaine Mason", 12.50); 
+	PayRoll p2 = PayRoll("Blaine notMason", 13.10);
+	PayRoll p3 = PayRoll("notBlaine Mason", 10.10);
+	PayRoll p4 = PayRoll("Blaine lowWages Mason", 2.50);
+	PayRoll p5 = PayRoll("Blaine getspaidalot Mason", 17.50);
+	PayRoll p6 = PayRoll("couldbeBlaine Mason", 16.01);
+	PayRoll p7 = PayRoll("Blaine almostMason", 10.50);
+	
+	//assignments of each payroll object to their given array index.
+	payroll[0] = p1;
+	payroll[1] = p2;
+	payroll[2] = p3;
+	payroll[3] = p4;
+	payroll[4] = p5;
+	payroll[5] = p6;
+	payroll[6] = p7;
+ 
+	//creation of the array of pointers to payroll objects
+	//which are assigned the memory locations of the objects 
+	//instead of the objects themselves
+	PayRoll* pRoll[7];
+	pRoll[0] = &p1;
+	pRoll[1] = &p2;
+	pRoll[2] = &p3;
+	pRoll[3] = &p4;
+	pRoll[4] = &p5;
+	pRoll[5] = &p6;
+	pRoll[6] = &p7;
+	
+	
+	double hoursWorked = 0.0;
+	for(int i = 0; i < 7; i++)
+	{	
+		do{//hours assignment with input validationo
+			cout << "Enter the number of hours worked for: " << payroll[i].getName() << endl;
+			cin >> hoursWorked;
+			if(hoursWorked > 60)
+			{
+				//if the hours are not in range:
+				cout << "Hours must be less than 60" << endl;
+			}
+		}while(hoursWorked > 60);
+
+		//uses the setHours method to assign the hours inputted to the proper object 
+		payroll[i].setHours(hoursWorked);
+	}
+	for(int i = 0; i < 7; i++)
+	{
+		//displays the info about each member on payroll
+		payroll[i].displayInfo();
+		cout << endl;
+	}
+	//displays the size of the regular array and the pointer array
+	cout << "Not Pointer Array: " << sizeof(payroll) << endl;
+	cout << "Pointer Array: " << sizeof(pRoll) << endl;
+	for(int i = 0; i < 7; i++)
+	{
+		//displays the memory location of each object in the different arrays
+		cout << "Index: " << i << " Pointer Arr: " << &pRoll[i] << " Regular Arr: " << &payroll[i] << endl;;
+	}	
+	/*
+ 	 *Claims:
+         * 9) The pointer arrays size is 56 bytes since each array index holds 8 bytes of data and 8*7 = 56
+         *    and the regular array is 168 bytes since each array index holds: object(8 bytes) + name(8 bytes) + payrate(8 bytes) = 24
+         *    24*7 = 168 bytes total
+         * 10) The memory addresses of the pointer array are spaced out by 8 bytes in hexadecimal addresses all one after the other
+         *     so (pRoll + 0)->(pRoll + 1)->(pRoll + 2)...
+         *     The memory addresses of the regular array are spaced out by 24 bytes in hexadecimal addresses, but it appears that this array comes 
+         *     after the pointer array in memory, i think.  
+         *     so (payroll + 0)->(payroll + 24)->(payroll + 48)...  Not 100% sure that is correct, just a claim.
+         *
+         *     payroll array is located on the stack
+         *     pRoll array is located on the heap (pointer array) 
+ 	 */	 		 
+	return 0;
+}	
+
+
+payroll.cpp:
+#include "payroll.h"
+
+/*
+ *Assigns name and payRate default values
+ */
+PayRoll::PayRoll()
+{
+	name = "no name";
+	payRate = 0.0;
+}
+/*
+ *Assigns name and payRate their associated parameters
+ */
+PayRoll::PayRoll(string str, double rate)
+{
+	name = str;
+	payRate = rate;
+}
+/*
+ * Set the hours for this employee
+ */
+void PayRoll::setHours(double hrs)
+{
+	hours = hrs;
+}
+/*
+ * Display info about the employee
+ */
+void PayRoll::displayInfo()
+{
+	cout << "Employee: " << name << endl;
+	cout << "Total Pay: " << getPay() << "$" <<  endl;
+}
+/*
+ * Calculate and return the total pay for
+ * this employee
+ */
+double PayRoll::getPay() const
+{
+	return payRate * hours;	
+}
+/*
+ * Return the name of the employee
+ */
+string PayRoll::getName() const
+{
+	return name;
+}
+
+payroll.h:
+#ifndef PAYROLL_H
+#define PAYROLL_H
+
+#include <string>
+#include <iostream>
+
+using namespace std;
+
+class PayRoll{
+	public:
+		PayRoll(); //default constructor
+		PayRoll(string str, double rate); //constructor with name and payrate as parameters
+		void setHours(double hrs); //set the number of hours
+		double getPay() const; //returns pay
+		string getName() const; //returns name
+		void displayInfo(); //displays name and total pay
+	private:
+		string name; //name
+		double payRate; //rate of pay
+		double hours; //hours worked
+};
+
+#endif
