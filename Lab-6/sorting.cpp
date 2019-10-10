@@ -88,10 +88,9 @@ bool isSorted(int* arr, int length, bool ascending){
   return true;
 }
 int main(){
-  int length = 100, count = 0;
+  int length = 100000, count = 0;
   int a[length];
   fillArray(a, length);
-  PrintArray(a, length);
   // The "auto" type determines the correct type at compile-time
   // -Dr.Anderson
   auto start = std::chrono::system_clock::now();
@@ -101,7 +100,7 @@ int main(){
   std::time_t end_time = std::chrono::system_clock::to_time_t(end);
   std::cout << "finished at " << std::ctime(&end_time)
   << "elapsed time: " << elapsed_seconds.count() << "s\n";
-  PrintArray(a, length);
+
   std::cout << "Swap: " << count << std::endl;
 
 
