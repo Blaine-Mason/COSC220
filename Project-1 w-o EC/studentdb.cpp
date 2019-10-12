@@ -81,10 +81,17 @@ Student StudentDB::getStudent(std::string nm){
   {
     return crsr->s;
   }else{
-    while( crsr->s.getName() != nm  && crsr != nullptr){
+    while(crsr->s.getName() != nm  && crsr->next != nullptr){
       crsr = crsr->next;
     }
-    return crsr->s;
+    if(crsr->next){
+        return crsr->s;
+    }else{
+        Student s;
+        std::cout << "Student Not Found" << std::endl;
+        s.setName("Not Found");
+        return s;
+    }
   }
 }
 void StudentDB::displayDB() const{

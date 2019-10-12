@@ -63,6 +63,9 @@ int main(){
         std::cout << "Enter the name for the Student you would like to edit: " << std::endl;
         std::getline(std::cin, name);
         updatedSt = students.getStudent(name);
+        if(updatedSt.getName() == "Not Found"){
+          break;
+        }
         do{
           std::cout << "Select what you would like to edit(-1 to finish): " << std::endl;
           std::cout << "1.)Date of Birth: " << updatedSt.getDoB() << std::endl;
@@ -127,6 +130,9 @@ int main(){
         std::cout << "Enter the name of the Student you wish to remove: ";
         std::getline(std::cin, temp);
         s = students.getStudent(temp);
+        if(s.getName() == "Not Found"){
+          break;
+        }
         students.deleteStudent(s);
         std::cout << s.getName() << " Removed!" << std::endl;
         break;
