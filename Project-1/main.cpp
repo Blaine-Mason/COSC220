@@ -1,8 +1,18 @@
 #include <iostream>
 #include <string>
+#include <fstream>
 #include "course.h"
 #include "student.h"
 #include "studentdb.h"
+
+
+StudentDB getData(){
+  std::ifstream data("StudentDB.txt");
+  if(data.is_open()){
+    int size = 0;
+    data >> size;
+  }
+}
 
 int main(){
   std::cout << "Welcome to Student Database" << std::endl;
