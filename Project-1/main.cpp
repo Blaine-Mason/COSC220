@@ -7,11 +7,34 @@
 
 
 StudentDB getData(){
+  StudentDB retrnDB;
   std::ifstream data("StudentDB.txt");
   if(data.is_open()){
-    int size = 0;
-    data >> size;
+    int studentSize = 0, courseSize = 0;
+    std::string name, dept, sem, major, dob;
+    char grade;
+    data >> studentSize;
+    for(int i = 0; i < 1; i++){
+      Student s;
+      data >> name;
+      data >> dob;
+      data >> major;
+      s.setName(name);
+      s.setDob(dob);
+      s.setMajor(major);
+      data >> courseSize;
+      for(int j = 0; j < courseSize; j++){
+        data >> name;
+        data >> dept;
+        data >> sem;
+        data >> grade;
+        Course c(name, dept, sem, grade);
+        s.addCourse(c);
+      }
+      retrnDB.createStudent(s);
+    }
   }
+  return retrnDB;
 }
 
 int main(){
@@ -19,6 +42,7 @@ int main(){
   char choice;
   StudentDB students;
   Student s;
+  students = getData();
   do{
     std::cout << "--------------------" << std::endl << "|C.) Create Student|" << std::endl <<  "--------------------" << std::endl;
     std::cout << "--------------------" << std::endl << "|U.) Update Student|" << std::endl <<  "--------------------" << std::endl;
