@@ -112,9 +112,13 @@ int main(){
                   std::cout << "Enter the index of the course you would like to remove: ";
                   std::cin >> courseIndex;
                   c = updatedSt.getCourse(courseIndex);
-                  updatedSt.removeCourse(c);
-                  std::cout << "Course Removed!" << std::endl;
-                  break;
+                  if(c.getName() == "NoName"){
+                    break;
+                  }else{
+                    updatedSt.removeCourse(c);
+                    std::cout << "Course Removed!" << std::endl;
+                    break;
+                  }
                 default:
                   break;
             }
