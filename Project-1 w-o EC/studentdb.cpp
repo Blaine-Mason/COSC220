@@ -58,7 +58,6 @@ void StudentDB::deleteStudent(Student st){
 }
 void StudentDB::updateStudent(Student st){
   StudentNode* crsr = head;
-
   std::string stName = st.getName();
 
   if(crsr->s.getName() == stName){
@@ -75,18 +74,21 @@ Student StudentDB::getStudent(std::string nm){
   if(crsr == nullptr){
     Student s;
     std::cout << "The list is empty." << std::endl;
+    s.setName("Not Found");
     return s;
   }
   if(crsr->s.getName() == nm)
   {
     return crsr->s;
   }else{
-    while(crsr->s.getName() != nm  && crsr->next != nullptr){
-      crsr = crsr->next;
-    }
-    if(crsr->next){
+    while(crsr != nullptr){
+      if(crsr->s.getName() == nm){
         return crsr->s;
-    }else{
+      }else{
+        crsr = crsr->next;
+      }
+    }
+    if(crsr == nullptr){
         Student s;
         std::cout << "Student Not Found" << std::endl;
         s.setName("Not Found");
@@ -95,10 +97,7 @@ Student StudentDB::getStudent(std::string nm){
   }
 }
 void StudentDB::displayDB() const{
-  int i = 1;
   for(StudentNode* crsr = head; crsr; crsr = crsr->next){
-    std::cout << i << ".) ";
     crsr->s.displayStudent();
-    i++;
   }
 }

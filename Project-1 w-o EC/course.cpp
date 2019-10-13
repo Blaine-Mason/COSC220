@@ -31,13 +31,12 @@ char Course::getGrade() const {
   return grade;
 }
 void Course::DisplayCourseInfo(){
-  /*
   std::cout << "===================================" << std::endl;
-  std::cout << "Course Name: " << this->getName() << std::endl;
-  std::cout << "Department: " << this->getDept() << std::endl;
-  std::cout << "Semester: " << this->getSem() << std::endl;
-  std::cout << "Grade Received: " << this->getGrade() << std::endl;
+  std::cout << "Course Name: " << this->getName();
+  std::cout << " Department: " << this->getDept();
+  std::cout << " Semester: " << this->getSem();
+  std::cout << " Grade Received: " << this->getGrade() << std::endl;
   std::cout << "===================================" << std::endl;
-  */
-  std::cout << this->getName() << " " << this->getDept() << " " << this->getSem() << " " << this->getGrade() << std::endl;
+
+  //std::cout << this->getName() << " " << this->getDept() << " " << this->getSem() << " " << this->getGrade() << std::endl;
 }

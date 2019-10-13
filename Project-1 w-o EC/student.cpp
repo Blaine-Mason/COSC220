@@ -95,11 +95,8 @@ void Student::addCourse(Course newCourse){
   }
 }
 void Student::printCourses() const{
-  int i = 0;
   for(CourseNode* crsr = courseHead; crsr; crsr = crsr->next){
-    std::cout << i << ": ";
     crsr->c.DisplayCourseInfo();
-    i++;
   }
 }
 int Student::totalCourses() const{
@@ -125,10 +122,10 @@ void Student::removeCourse(Course c){
       prev = crsr;
       crsr = crsr->next;
     }
-    if(crsr == nullptr){
-      std::cout << "Course not Found in the List" << std::endl;
+    if(crsr){
+            prev->next = crsr->next;
     }else{
-      prev->next = crsr->next;
+      std::cout << "Course not Found in the List" << std::endl;
     }
   }
 }
@@ -147,7 +144,6 @@ Course Student::getCourse(int n){
   }
 }
 void Student::displayStudent() const{
-  /*
   std::cout << "*******************************" << std::endl;
   std::cout << "Name: " << this->getName() << std::endl;
   std::cout << "Date of Birth: " << this->getDoB() << std::endl;
@@ -155,8 +151,7 @@ void Student::displayStudent() const{
   std::cout << "Courses Taken:" << std::endl;
   this->printCourses();
   std::cout << "*******************************" << std::endl;
-  */
-  std::cout << this->getName() << " " << this->getDoB() << " " << this->getMajor() << " " << std::endl;
-  this->printCourses();
+  //std::cout << this->getName() << " " << this->getDoB() << " " << this->getMajor() << " " << std::endl;
+  //this->printCourses();
 
 }
