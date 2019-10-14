@@ -88,9 +88,10 @@ bool isSorted(int* arr, int length, bool ascending){
   return true;
 }
 int main(){
-  for(int len = 10; len < 100000; len = len*10){
+  for(int len = 10; len < 10000000; len = len*10){
     int count = 0;
-    int a[len];
+    int* a;
+    a = new int[len];
     fillArray(a, len);
     std::cout << "Insertion Sort "<< len << ": " << std::endl;
     InsertionSort(a, len, false, count); // replace with your sorting alorithm
@@ -104,11 +105,13 @@ int main(){
     std::cout << "finished at " << std::ctime(&end_time)
     << "elapsed time: " << elapsed_seconds.count() << "s\n";
     std::cout << "Swap: " << count << std::endl;
+    delete[] a;
   }
   std::cout << std::endl << std::endl;
-  for(int len = 10; len < 100000; len = len*10){
+  for(int len = 10; len < 10000000; len = len*10){
     int count = 0;
-    int a[len];
+    int* a;
+    a = new int[len];
     fillArray(a, len);
     std::cout << "Selection Sort "<< len << ": " << std::endl;
     SelectionSort(a, len, false, count);
@@ -122,11 +125,13 @@ int main(){
     std::cout << "finished at " << std::ctime(&end_time)
     << "elapsed time: " << elapsed_seconds.count() << "s\n";
     std::cout << "Swap: " << count << std::endl;
+    delete[] a;
   }
   std::cout << std::endl << std::endl;
-  for(int len = 10; len < 100000; len = len*10){
+  for(int len = 10; len < 10000000; len = len*10){
     int count = 0;
-    int a[len];
+    int* a;
+    a = new int[len];
     fillArray(a, len);
     std::cout << "Bubble Sort "<< len << ": " << std::endl;
     BubbleSort(a, len, false, count);
@@ -140,6 +145,7 @@ int main(){
     std::cout << "finished at " << std::ctime(&end_time)
     << "elapsed time: " << elapsed_seconds.count() << "s\n";
     std::cout << "Swap: " << count << std::endl;
+    delete[] a;
   }
 
 
