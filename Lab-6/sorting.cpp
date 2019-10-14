@@ -48,7 +48,7 @@ void SelectionSort(int* ar, int length, bool ascending, int& c){
         }
       }
     }
-    Swap(ar[i], ar[min], c);
+    Swap(ar[min], ar[i], c);
   }
 }
 void InsertionSort(int* ar, int length, bool ascending, int& c){
@@ -88,20 +88,59 @@ bool isSorted(int* arr, int length, bool ascending){
   return true;
 }
 int main(){
-  int length = 100000, count = 0;
-  int a[length];
-  fillArray(a, length);
-  // The "auto" type determines the correct type at compile-time
-  // -Dr.Anderson
-  auto start = std::chrono::system_clock::now();
-  InsertionSort(a, length, false, count); // replace with your sorting alorithm
-  auto end = std::chrono::system_clock::now();
-  std::chrono::duration<double> elapsed_seconds = end-start;
-  std::time_t end_time = std::chrono::system_clock::to_time_t(end);
-  std::cout << "finished at " << std::ctime(&end_time)
-  << "elapsed time: " << elapsed_seconds.count() << "s\n";
+  for(int len = 10; len < 100000; len = len*10){
+    int count = 0;
+    int a[len];
+    fillArray(a, len);
+    std::cout << "Insertion Sort "<< len << ": " << std::endl;
+    InsertionSort(a, len, false, count); // replace with your sorting alorithm
 
-  std::cout << "Swap: " << count << std::endl;
+    // The "auto" type determines the correct type at compile-time
+    // -Dr.Anderson
+    auto start = std::chrono::system_clock::now();
+    auto end = std::chrono::system_clock::now();
+    std::chrono::duration<double> elapsed_seconds = end-start;
+    std::time_t end_time = std::chrono::system_clock::to_time_t(end);
+    std::cout << "finished at " << std::ctime(&end_time)
+    << "elapsed time: " << elapsed_seconds.count() << "s\n";
+    std::cout << "Swap: " << count << std::endl;
+  }
+  std::cout << std::endl << std::endl;
+  for(int len = 10; len < 100000; len = len*10){
+    int count = 0;
+    int a[len];
+    fillArray(a, len);
+    std::cout << "Selection Sort "<< len << ": " << std::endl;
+    SelectionSort(a, len, false, count);
+
+    // The "auto" type determines the correct type at compile-time
+    // -Dr.Anderson
+    auto start = std::chrono::system_clock::now();
+    auto end = std::chrono::system_clock::now();
+    std::chrono::duration<double> elapsed_seconds = end-start;
+    std::time_t end_time = std::chrono::system_clock::to_time_t(end);
+    std::cout << "finished at " << std::ctime(&end_time)
+    << "elapsed time: " << elapsed_seconds.count() << "s\n";
+    std::cout << "Swap: " << count << std::endl;
+  }
+  std::cout << std::endl << std::endl;
+  for(int len = 10; len < 100000; len = len*10){
+    int count = 0;
+    int a[len];
+    fillArray(a, len);
+    std::cout << "Bubble Sort "<< len << ": " << std::endl;
+    BubbleSort(a, len, false, count);
+
+    // The "auto" type determines the correct type at compile-time
+    // -Dr.Anderson
+    auto start = std::chrono::system_clock::now();
+    auto end = std::chrono::system_clock::now();
+    std::chrono::duration<double> elapsed_seconds = end-start;
+    std::time_t end_time = std::chrono::system_clock::to_time_t(end);
+    std::cout << "finished at " << std::ctime(&end_time)
+    << "elapsed time: " << elapsed_seconds.count() << "s\n";
+    std::cout << "Swap: " << count << std::endl;
+  }
 
 
 
