@@ -71,9 +71,8 @@ Student::~Student(){
   //if the list is empty
   if(courseHead == nullptr){
     delete courseHead;
-    return;
   }else{
-    //travese the list and delete rhe courses
+    //travese the list and delete the courses
     CourseNode* crsr = courseHead;
     while(crsr){
       crsr = crsr->next;
