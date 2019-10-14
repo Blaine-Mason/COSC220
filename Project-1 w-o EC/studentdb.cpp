@@ -6,6 +6,43 @@ StudentDB::StudentDB(){
   head = nullptr;
 }
 /*
+* Copy Constructor
+*/
+StudentDB::StudentDB(const StudentDB& rhs){
+  StudentNode* crsr = rhs.head;
+  head = nullptr;
+  while(crsr){
+    //Traverse the list and add Students
+    createStudent(crsr->s);
+    crsr = crsr->next;
+  }
+}
+/*
+* Assignment operator= overload
+*/
+StudentDB& StudentDB::operator=(const StudentDB& rhs){
+  //If it is a self assignment
+  if(this == &rhs){
+    std::cout << "They are the same." << std::endl;
+  }else{
+    StudentNode* crsr = this->head;
+    //Get rid of any old students
+    while(crsr){
+      crsr = crsr->next;
+      delete this->head;
+      this->head = crsr;
+    }
+    head = nullptr;
+    crsr = rhs.head;
+    while(crsr){
+      //Traverse the list and add the Students
+      this->createStudent(crsr->s);
+      crsr = crsr->next;
+    }
+  }
+  return *this;
+}
+/*
 * Destructor
 */
 StudentDB::~StudentDB(){

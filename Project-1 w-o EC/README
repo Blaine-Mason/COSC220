@@ -1,0 +1,248 @@
+Blaine Mason
+Project 1
+
+Welcome to the user guide for the Student Database project!
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Just in case, start out by running:
+make clean
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Next you'll want to run:
+./StudentDB
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Unless you're Dr.Anderson, then run:
+valgrind --leak-check=full ./StudentDB
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+You'll see a menu that looks like this:
+Welcome to Student Database
+--------------------
+|C.) Create Student|
+--------------------
+--------------------
+|U.) Update Student|
+--------------------
+--------------------
+|D.) Delete Student|
+--------------------
+--------------------
+|E.) Exit          |
+--------------------
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C) This command allows you to create a student and add it to the
+   Database. The information you'll input will be the name, date
+   of birth, and major. You'll be prompted to enter the courses
+   taken, if no courses were taken, enter n. If you do have courses
+   to add, enter y. You'll enter information about the course like the
+   name, department, semester, and grade. After that you'll be prompted
+   the menu again.
+U) This command allows you to edit information about a student already
+   in the Database. You'll be prompted for the name of the student you would
+   like to edit, then information will be displayed about the student so
+   you know what can be edited. Entering -1 exits the update, if you choose
+   to update a course, you can add or remove it. When removing it's important
+   to know you start with 0. After entering -1, you'll be prompted with the
+   menu again
+D) This command allows you to delete a student from the Database. You'll have the
+   database printed out, and you can enter the name of the student to be deleted.
+   After deleting a student you will be displayed the menu again.
+E) Exits the program, and since I did not do the extra credit, all the work you
+   just did on the database will be deleted from the heap...(hopefully).
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Here is a sample output:
+Welcome to Student Database
+--------------------
+|C.) Create Student|
+--------------------
+--------------------
+|U.) Update Student|
+--------------------
+--------------------
+|D.) Delete Student|
+--------------------
+--------------------
+|E.) Exit          |
+--------------------
+C
+Name: Blaine Mason
+Date of Birth: 09-16-2000
+Major: Computer Science, Computational Mathematical Sciences
+Add a course?(y/n): y
+Name: COSC 117
+Department: Computer Science
+Semester: FAL18
+Grade: A
+Add a course?(y/n): y
+Name: COSC 120
+Department: Computer Science
+Semester: SPR18
+Grade: A
+Add a course?(y/n): y
+Name: MATH 201
+Department: Math
+Semester: FAL18
+Grade: A
+Add a course?(y/n): y
+Name: MATH 202
+Department: Math
+Semester: SPR19
+Grade: A
+Add a course?(y/n): n
+--------------------
+|C.) Create Student|
+--------------------
+--------------------
+|U.) Update Student|
+--------------------
+--------------------
+|D.) Delete Student|
+--------------------
+--------------------
+|E.) Exit          |
+--------------------
+U
+Enter the name for the Student you would like to edit:
+Blaine Mason
+Select what you would like to edit(-1 to finish):
+1.)Date of Birth: 09-16-2000
+2.)Major: Computer Science, Computational Mathematical Sciences
+3.)Courses:
+===================================
+Course Name: COSC 117 Department: Computer Science Semester: FAL18 Grade Received: A
+===================================
+===================================
+Course Name: COSC 120 Department: Computer Science Semester: SPR18 Grade Received: A
+===================================
+===================================
+Course Name: MATH 201 Department: Math Semester: FAL18 Grade Received: A
+===================================
+===================================
+Course Name: MATH 202 Department: Math Semester: SPR19 Grade Received: A
+===================================
+1
+Enter the updated Date of Birth: 09-16-2019
+DoB Updated!
+Select what you would like to edit(-1 to finish):
+1.)Date of Birth: 09-16-2019
+2.)Major: Computer Science, Computational Mathematical Sciences
+3.)Courses:
+===================================
+Course Name: COSC 117 Department: Computer Science Semester: FAL18 Grade Received: A
+===================================
+===================================
+Course Name: COSC 120 Department: Computer Science Semester: SPR18 Grade Received: A
+===================================
+===================================
+Course Name: MATH 201 Department: Math Semester: FAL18 Grade Received: A
+===================================
+===================================
+Course Name: MATH 202 Department: Math Semester: SPR19 Grade Received: A
+===================================
+2
+Enter the updated Major: Art
+Major Updated!
+Select what you would like to edit(-1 to finish):
+1.)Date of Birth: 09-16-2019
+2.)Major: Art
+3.)Courses:
+===================================
+Course Name: COSC 117 Department: Computer Science Semester: FAL18 Grade Received: A
+===================================
+===================================
+Course Name: COSC 120 Department: Computer Science Semester: SPR18 Grade Received: A
+===================================
+===================================
+Course Name: MATH 201 Department: Math Semester: FAL18 Grade Received: A
+===================================
+===================================
+Course Name: MATH 202 Department: Math Semester: SPR19 Grade Received: A
+===================================
+3
+Would you like to (1)add or (2)remove a course:
+2
+===================================
+Course Name: COSC 117 Department: Computer Science Semester: FAL18 Grade Received: A
+===================================
+===================================
+Course Name: COSC 120 Department: Computer Science Semester: SPR18 Grade Received: A
+===================================
+===================================
+Course Name: MATH 201 Department: Math Semester: FAL18 Grade Received: A
+===================================
+===================================
+Course Name: MATH 202 Department: Math Semester: SPR19 Grade Received: A
+===================================
+Enter the index of the course you would like to remove: 1
+Course Removed!
+Select what you would like to edit(-1 to finish):
+1.)Date of Birth: 09-16-2019
+2.)Major: Art
+3.)Courses:
+===================================
+Course Name: COSC 117 Department: Computer Science Semester: FAL18 Grade Received: A
+===================================
+===================================
+Course Name: MATH 201 Department: Math Semester: FAL18 Grade Received: A
+===================================
+===================================
+Course Name: MATH 202 Department: Math Semester: SPR19 Grade Received: A
+===================================
+2
+Enter the updated Major: Computer Science
+Major Updated!
+Select what you would like to edit(-1 to finish):
+1.)Date of Birth: 09-16-2019
+2.)Major: Computer Science
+3.)Courses:
+===================================
+Course Name: COSC 117 Department: Computer Science Semester: FAL18 Grade Received: A
+===================================
+===================================
+Course Name: MATH 201 Department: Math Semester: FAL18 Grade Received: A
+===================================
+===================================
+Course Name: MATH 202 Department: Math Semester: SPR19 Grade Received: A
+===================================
+-1
+--------------------
+|C.) Create Student|
+--------------------
+--------------------
+|U.) Update Student|
+--------------------
+--------------------
+|D.) Delete Student|
+--------------------
+--------------------
+|E.) Exit          |
+--------------------
+D
+*******************************
+Name: Blaine Mason
+Date of Birth: 09-16-2019
+Major: Art
+Courses Taken:
+===================================
+Course Name: COSC 117 Department: Computer Science Semester: FAL18 Grade Received: A
+===================================
+===================================
+Course Name: MATH 201 Department: Math Semester: FAL18 Grade Received: A
+===================================
+===================================
+Course Name: MATH 202 Department: Math Semester: SPR19 Grade Received: A
+===================================
+*******************************
+Enter the name of the Student you wish to remove: Blaine Mason
+Blaine Mason Removed!
+--------------------
+|C.) Create Student|
+--------------------
+--------------------
+|U.) Update Student|
+--------------------
+--------------------
+|D.) Delete Student|
+--------------------
+--------------------
+|E.) Exit          |
+--------------------
+E

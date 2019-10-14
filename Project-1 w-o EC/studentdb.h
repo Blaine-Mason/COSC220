@@ -15,6 +15,8 @@ class StudentDB{
     StudentNode* head;
   public:
     StudentDB();
+    StudentDB(const StudentDB& rhs);
+    StudentDB& operator=(const StudentDB& rhs);
     ~StudentDB();
     void createStudent(Student);
     void deleteStudent(Student);
