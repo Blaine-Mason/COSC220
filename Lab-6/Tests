@@ -1,0 +1,176 @@
+First time: Random->Ascending
+Second time: Ascending->Random
+
+
+Insertion Sort 70000:
+finished at Tue Oct 15 00:15:42 2019
+elapsed time: 6.7469s
+Swap: 1210771587
+finished at Tue Oct 15 00:15:56 2019
+elapsed time: 13.3125s
+Swap: -658728101
+Insertion Sort 77000:
+finished at Tue Oct 15 00:16:04 2019
+elapsed time: 8.0469s
+Swap: 1467114140
+finished at Tue Oct 15 00:16:20 2019
+elapsed time: 16.0991s
+Swap: 106966889
+Insertion Sort 84700:
+finished at Tue Oct 15 00:16:30 2019
+elapsed time: 9.69748s
+Swap: 1777349150
+finished at Tue Oct 15 00:16:49 2019
+elapsed time: 19.3621s
+Swap: 1033516543
+Insertion Sort 93170:
+finished at Tue Oct 15 00:17:01 2019
+elapsed time: 11.7696s
+Swap: 2143594975
+finished at Tue Oct 15 00:17:24 2019
+elapsed time: 23.5712s
+Swap: 2145499317
+Insertion Sort 102487:
+finished at Tue Oct 15 00:17:39 2019
+elapsed time: 14.3607s
+Swap: -1692449681
+finished at Tue Oct 15 00:18:08 2019
+elapsed time: 28.8501s
+Swap: -788188732
+Insertion Sort 112735:
+finished at Tue Oct 15 00:18:25 2019
+elapsed time: 17.2946s
+Swap: -1147208406
+finished at Tue Oct 15 00:18:59 2019
+elapsed time: 34.4815s
+Swap: 848811812
+Insertion Sort 124008:
+finished at Tue Oct 15 00:19:20 2019
+elapsed time: 21.0411s
+Swap: -483998750
+finished at Tue Oct 15 00:20:02 2019
+elapsed time: 41.8173s
+Swap: -1461882113
+Insertion Sort 136408:
+finished at Tue Oct 15 00:20:27 2019
+elapsed time: 25.243s
+Swap: 309890420
+finished at Tue Oct 15 00:21:18 2019
+elapsed time: 50.4716s
+Swap: 930425070
+
+
+Selection Sort 70000:
+finished at Tue Oct 15 00:21:23 2019
+elapsed time: 5.16584s
+Swap: 69999
+finished at Tue Oct 15 00:21:28 2019
+elapsed time: 5.18262s
+Swap: 139998
+Selection Sort 77000:
+finished at Tue Oct 15 00:21:34 2019
+elapsed time: 6.25219s
+Swap: 76999
+finished at Tue Oct 15 00:21:41 2019
+elapsed time: 6.26314s
+Swap: 153998
+Selection Sort 84700:
+finished at Tue Oct 15 00:21:48 2019
+elapsed time: 7.57622s
+Swap: 84699
+finished at Tue Oct 15 00:21:56 2019
+elapsed time: 7.5785s
+Swap: 169398
+Selection Sort 93170:
+finished at Tue Oct 15 00:22:05 2019
+elapsed time: 9.15552s
+Swap: 93169
+finished at Tue Oct 15 00:22:14 2019
+elapsed time: 9.1723s
+Swap: 186338
+Selection Sort 102487:
+finished at Tue Oct 15 00:22:25 2019
+elapsed time: 11.0745s
+Swap: 102486
+finished at Tue Oct 15 00:22:36 2019
+elapsed time: 11.0983s
+Swap: 204972
+Selection Sort 112735:
+finished at Tue Oct 15 00:22:50 2019
+elapsed time: 13.3963s
+Swap: 112734
+finished at Tue Oct 15 00:23:03 2019
+elapsed time: 13.5313s
+Swap: 225468
+Selection Sort 124008:
+finished at Tue Oct 15 00:23:20 2019
+elapsed time: 16.2632s
+Swap: 124007
+finished at Tue Oct 15 00:23:36 2019
+elapsed time: 16.2439s
+Swap: 248014
+Selection Sort 136408:
+finished at Tue Oct 15 00:23:55 2019
+elapsed time: 19.6043s
+Swap: 136407
+finished at Tue Oct 15 00:24:15 2019
+elapsed time: 19.645s
+Swap: 272814
+
+
+Bubble Sort 70000:
+finished at Tue Oct 15 00:24:36 2019
+elapsed time: 20.6009s
+Swap: 1217701388
+finished at Tue Oct 15 00:24:55 2019
+elapsed time: 19.2133s
+Swap: -651740552
+Bubble Sort 77000:
+finished at Tue Oct 15 00:25:19 2019
+elapsed time: 24.466s
+Swap: 1463595569
+finished at Tue Oct 15 00:25:42 2019
+elapsed time: 22.9049s
+Swap: 103523761
+Bubble Sort 84700:
+finished at Tue Oct 15 00:26:12 2019
+elapsed time: 29.6325s
+Swap: 1777555066
+finished at Tue Oct 15 00:26:40 2019
+elapsed time: 27.7081s
+Swap: 1033802812
+Bubble Sort 93170:
+finished at Tue Oct 15 00:27:16 2019
+elapsed time: 36.0364s
+Swap: -2145518649
+finished at Tue Oct 15 00:27:49 2019
+elapsed time: 33.5431s
+Swap: -2143507733
+Bubble Sort 102487:
+finished at Tue Oct 15 00:28:33 2019
+elapsed time: 43.4909s
+Swap: -1685571974
+finished at Tue Oct 15 00:29:13 2019
+elapsed time: 40.5764s
+Swap: -781211277
+Bubble Sort 112735:
+finished at Tue Oct 15 00:30:06 2019
+elapsed time: 52.6184s
+Swap: -1153405810
+finished at Tue Oct 15 00:30:55 2019
+elapsed time: 49.1627s
+Swap: 842734473
+Bubble Sort 124008:
+finished at Tue Oct 15 00:31:59 2019
+elapsed time: 63.7348s
+Swap: -483385968
+finished at Tue Oct 15 00:32:58 2019
+elapsed time: 59.4058s
+Swap: -1461163243
+Bubble Sort 136408:
+finished at Tue Oct 15 00:34:15 2019
+elapsed time: 76.9664s
+Swap: 312478621
+finished at Tue Oct 15 00:35:28 2019
+elapsed time: 72.4566s
+Swap: 933139937
