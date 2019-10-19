@@ -4,14 +4,16 @@
 #include <iostream>
 #include <string>
 
+struct Disk{
+  int size;
+  Disk* next;
+};
+
 class HanoiStack{
   private:
-    struct Disk{
-      int size;
-      Disk* next;
-    };
     Disk* head;
   public:
+    HanoiStack();
     HanoiStack(int);
     void push(Disk*);
     void pop(Disk&);

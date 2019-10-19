@@ -1,5 +1,7 @@
 #include "HanoiStack.h"
-
+HanoiStack::HanoiStack(){
+  head = nullptr;
+}
 HanoiStack::HanoiStack(int s){
   Disk* d = new Disk;
   d->size = s;
