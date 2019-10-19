@@ -7,11 +7,13 @@
 struct Disk{
   int size;
   Disk* next;
+  Disk* prev;
 };
 
 class HanoiStack{
   private:
     Disk* head;
+    Disk* last;
   public:
     HanoiStack();
     HanoiStack(int);
