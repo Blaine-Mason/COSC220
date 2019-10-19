@@ -145,8 +145,11 @@ void Student::addCourse(Course newCourse){
 * Displays the Courses of the student
 */
 void Student::printCourses() const{
+  int i = 0;
   for(CourseNode* crsr = courseHead; crsr; crsr = crsr->next){
+    std::cout << i << ".) " << std::endl;
     crsr->c.DisplayCourseInfo();
+    i++;
   }
 }
 /*
