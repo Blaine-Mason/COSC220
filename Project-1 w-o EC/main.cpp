@@ -1,5 +1,7 @@
 #include <iostream>
 #include <string>
+#include <stdio.h> //system("clear")
+#include <unistd.h> //usleep
 #include "course.h"
 #include "student.h"
 #include "studentdb.h"
@@ -14,15 +16,16 @@ int main(){
     std::cout << "--------------------" << std::endl << "|C.) Create Student|" << std::endl <<  "--------------------" << std::endl;
     std::cout << "--------------------" << std::endl << "|U.) Update Student|" << std::endl <<  "--------------------" << std::endl;
     std::cout << "--------------------" << std::endl << "|D.) Delete Student|" << std::endl <<  "--------------------" << std::endl;
+    std::cout << "--------------------" << std::endl << "|P.) Print Database|" << std::endl <<  "--------------------" << std::endl;
     std::cout << "--------------------" << std::endl << "|E.) Exit          |" << std::endl <<  "--------------------" << std::endl;
     std::cin >> choice;
     std::cin.ignore();
+    system("clear");
     //Variable to hold temp information with Students and Course
     std::string temp;
-    char cTemp;
     int iTemp, selection, courseIndex;
-    std::string name, dept, sem;
-    char grade;
+    std::string name, dept, sem, grade;
+    char cTemp;
     Course c;
     Student updatedSt;
 
@@ -30,6 +33,7 @@ int main(){
       //Create Student
       case 'C':
       //Get the information from the user about the student
+        std::cout << "~CREATE STUDENT~" << std::endl;
         s = Student();
         std::cout << "Name: ";
         std::getline(std::cin, temp);
@@ -40,6 +44,7 @@ int main(){
         std::cout << "Major: ";
         std::getline(std::cin, temp);
         s.setMajor(temp);
+        system("clear");
         do{
           //Add Courses until input is n
           std::cout << "Add a course?(y/n): ";
@@ -60,13 +65,16 @@ int main(){
             std::cin >> grade;
             c = Course(name, dept, sem, grade);
             s.addCourse(c);
+            system("clear");
           }
         }while(cTemp != 'n');
         //Add the student to the database
         students.createStudent(s);
+        system("clear");
         break;
       case 'U':
       //Get the student to edit
+        std::cout << "~UPDATE STUDENT~" << std::endl;
         std::cout << "Enter the name for the Student you would like to edit: " << std::endl;
         std::getline(std::cin, name);
         //Assign updated st to the Student gotten from the list
@@ -84,6 +92,7 @@ int main(){
           updatedSt.printCourses();
           std::cin >> selection;
           std::cin.ignore();
+          system("clear");
           /*
           *For each selection, updatedSt is changed accordingly
           */
@@ -93,12 +102,16 @@ int main(){
               std::getline(std::cin, temp);
               updatedSt.setDob(temp);
               std::cout << "DoB Updated!" << std::endl;
+              usleep(1000000);
+              system("clear");
               break;
             case 2:
               std::cout << "Enter the updated Major: ";
               std::getline(std::cin, temp);
               updatedSt.setMajor(temp);
               std::cout << "Major Updated!" << std::endl;
+              usleep(1000000);
+              system("clear");
               break;
             case 3:
               std::cout << "Would you like to (1)add or (2)remove a course: " << std::endl;
@@ -120,6 +133,8 @@ int main(){
                   std::cin >> grade;
                   c = Course(name, dept, sem, grade);
                   updatedSt.addCourse(c);
+                  usleep(1000000);
+                  system("clear");
                   break;
                 //Removes a course index wise
                 case 2:
@@ -132,6 +147,8 @@ int main(){
                   }else{
                     updatedSt.removeCourse(c);
                     std::cout << "Course Removed!" << std::endl;
+                    usleep(1000000);
+                    system("clear");
                     break;
                   }
                 default:
@@ -144,9 +161,12 @@ int main(){
             break;
           }
         }while(selection != -1);
+        usleep(1000000);
+        system("clear");
         break;
         //Delete student given the name
       case 'D':
+        std::cout << "~DELETE STUDENT~" << std::endl;
         students.displayDB();
         std::cout << "Enter the name of the Student you wish to remove: ";
         std::getline(std::cin, temp);
@@ -157,10 +177,18 @@ int main(){
         }
         students.deleteStudent(s);
         std::cout << s.getName() << " Removed!" << std::endl;
+        usleep(1000000);
+        system("clear");
         break;
       case 'P':
       //Test function, this ones on me
+        char c;
+        std::cout << "~STUDENT DATABASE~" << std::endl;
         students.displayDB();
+        std::cout << "Enter C to continue: ";
+        std::cin >> c;
+        usleep(1000000);
+        system("clear");
         break;
       default:
         break;

@@ -1,0 +1,76 @@
+Blaine Mason
+Lab-6
+
+I chose to use for loops in my main to allow the sizes to be within a reasonable range
+of one another(70,000~140,000) which allowed me to compare the elapsed time better.  Since,
+when the size is smaller, the time is smaller... a lot smaller.
+
+I made a swap function due to peer pressure.
+
+a) Bubble:
+    Worst: O(n) Best: O(n^2)
+   Selection:
+    Worst: O(n^2) Best: O(n^2)
+   Insertion:
+    Worst: O(n) Best: O(n^2)
+b) Selection Sort:
+Selection Sort 1000:
+finished at Tue Oct 15 01:00:20 2019
+elapsed time: 0.00109875s
+Swap: 999
+Selection Sort 2000:
+finished at Tue Oct 15 01:00:20 2019
+elapsed time: 0.00429571s
+Swap: 1999
+Selection Sort 4000:
+finished at Tue Oct 15 01:00:20 2019
+elapsed time: 0.0172657s
+Swap: 3999
+Selection Sort 8000:
+finished at Tue Oct 15 01:00:20 2019
+elapsed time: 0.0681091s
+Swap: 7999
+Selection Sort 16000:
+finished at Tue Oct 15 01:00:20 2019
+elapsed time: 0.27308s
+Swap: 15999
+Selection Sort 32000:
+finished at Tue Oct 15 01:00:21 2019
+elapsed time: 1.08002s
+Swap: 31999
+Selection Sort 64000:
+finished at Tue Oct 15 01:00:26 2019
+elapsed time: 4.32769s
+Swap: 63999
+
+Section Sort in fact when the size doubles, it takes 4x longer.
+
+If the number of elements in the array increases, the time increases proportional to how
+much each size increases each time.  Since, no matter the case it will always
+be O(n^2):
+For Example(Section sort, size quadruples 16x):
+Selection Sort 1000:
+finished at Tue Oct 15 01:05:21 2019
+elapsed time: 0.00109833s
+Swap: 999
+Selection Sort 4000:
+finished at Tue Oct 15 01:05:21 2019
+elapsed time: 0.0174551s
+Swap: 3999
+Selection Sort 16000:
+finished at Tue Oct 15 01:05:21 2019
+elapsed time: 0.270564s
+Swap: 15999
+Selection Sort 64000:
+finished at Tue Oct 15 01:05:26 2019
+elapsed time: 4.32431s
+Swap: 63999
+
+4.32/.27=16.00
+
+c) *See print outs of fancy cool graphs*
+d) Bubble sort did super bad in a sort of random numbers into descending order.
+   Insertion and Selection did really good in ascending and descending.
+   All sorting didn't perform well in a sort from Ascending to descending.
+   Best: Random->Descending
+   Worst: Ascending->Descending

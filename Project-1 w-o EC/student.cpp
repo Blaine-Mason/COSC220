@@ -145,8 +145,11 @@ void Student::addCourse(Course newCourse){
 * Displays the Courses of the student
 */
 void Student::printCourses() const{
+  int i = 0;
   for(CourseNode* crsr = courseHead; crsr; crsr = crsr->next){
+    std::cout << i << ".) " << std::endl;
     crsr->c.DisplayCourseInfo();
+    i++;
   }
 }
 /*
@@ -199,7 +202,7 @@ Course Student::getCourse(int n){
   CourseNode* crsr = courseHead;
   int len = this->totalCourses();
   //If the index is larger than the length of the list
-  if(len < n && n < 0){
+  if(len <= n || n < 0){
     Course c;
     std::cout << "Index out of Bounds!" << std::endl;
     return c;

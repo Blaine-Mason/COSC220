@@ -1,0 +1,207 @@
+ 
+Welcome to Student Database
+--------------------
+|C.) Create Student|
+--------------------
+--------------------
+|U.) Update Student|
+--------------------
+--------------------
+|D.) Delete Student|
+--------------------
+--------------------
+|E.) Exit          |
+--------------------
+C
+Name: Blaine Mason
+Date of Birth: 09-16-2000
+Major: Computer Science
+Add a course?(y/n): y
+Name: COSC 220
+Department: Computer Science
+Semester: FAL19
+Grade: C
+Add a course?(y/n): y
+Name: COSC 250
+Department: Computer Science
+Semester: FAL19
+Grade: A
+Add a course?(y/n): n
+--------------------
+|C.) Create Student|
+--------------------
+--------------------
+|U.) Update Student|
+--------------------
+--------------------
+|D.) Delete Student|
+--------------------
+--------------------
+|E.) Exit          |
+--------------------
+U
+Enter the name for the Student you would like to edit: 
+Jim
+Student Not Found
+--------------------
+|C.) Create Student|
+--------------------
+--------------------
+|U.) Update Student|
+--------------------
+--------------------
+|D.) Delete Student|
+--------------------
+--------------------
+|E.) Exit          |
+--------------------
+U
+Enter the name for the Student you would like to edit: 
+Blaine Mason
+Select what you would like to edit(-1 to finish): 
+1.)Date of Birth: 09-16-2000
+2.)Major: Computer Science
+3.)Courses: 
+===================================
+Course Name: COSC 220 Department: Computer Science Semester: FAL19 Grade Received: C
+===================================
+===================================
+Course Name: COSC 250 Department: Computer Science Semester: FAL19 Grade Received: A
+===================================
+2
+Enter the updated Major: Art
+Major Updated!
+Select what you would like to edit(-1 to finish): 
+1.)Date of Birth: 09-16-2000
+2.)Major: Art
+3.)Courses: 
+===================================
+Course Name: COSC 220 Department: Computer Science Semester: FAL19 Grade Received: C
+===================================
+===================================
+Course Name: COSC 250 Department: Computer Science Semester: FAL19 Grade Received: A
+===================================
+3
+Would you like to (1)add or (2)remove a course: 
+2
+===================================
+Course Name: COSC 220 Department: Computer Science Semester: FAL19 Grade Received: C
+===================================
+===================================
+Course Name: COSC 250 Department: Computer Science Semester: FAL19 Grade Received: A
+===================================
+Enter the index of the course you would like to remove(Counting from 0): 10
+Index out of Bounds!
+Select what you would like to edit(-1 to finish): 
+1.)Date of Birth: 09-16-2000
+2.)Major: Art
+3.)Courses: 
+===================================
+Course Name: COSC 220 Department: Computer Science Semester: FAL19 Grade Received: C
+===================================
+===================================
+Course Name: COSC 250 Department: Computer Science Semester: FAL19 Grade Received: A
+===================================
+3
+Would you like to (1)add or (2)remove a course: 
+2
+===================================
+Course Name: COSC 220 Department: Computer Science Semester: FAL19 Grade Received: C
+===================================
+===================================
+Course Name: COSC 250 Department: Computer Science Semester: FAL19 Grade Received: A
+===================================
+Enter the index of the course you would like to remove(Counting from 0): 1
+Course Removed!
+Select what you would like to edit(-1 to finish): 
+1.)Date of Birth: 09-16-2000
+2.)Major: Art
+3.)Courses: 
+===================================
+Course Name: COSC 220 Department: Computer Science Semester: FAL19 Grade Received: C
+===================================
+3
+Would you like to (1)add or (2)remove a course: 
+1
+Name: ART 101
+Department: Art 
+Semester: FAL19
+Grade: F
+Select what you would like to edit(-1 to finish): 
+1.)Date of Birth: 09-16-2000
+2.)Major: Art
+3.)Courses: 
+===================================
+Course Name: COSC 220 Department: Computer Science Semester: FAL19 Grade Received: C
+===================================
+===================================
+Course Name: ART 101 Department: Art Semester: FAL19 Grade Received: F
+===================================
+-1
+--------------------
+|C.) Create Student|
+--------------------
+--------------------
+|U.) Update Student|
+--------------------
+--------------------
+|D.) Delete Student|
+--------------------
+--------------------
+|E.) Exit          |
+--------------------
+D
+*******************************
+Name: Blaine Mason
+Date of Birth: 09-16-2000
+Major: Art
+Courses Taken:
+===================================
+Course Name: COSC 220 Department: Computer Science Semester: FAL19 Grade Received: C
+===================================
+===================================
+Course Name: ART 101 Department: Art Semester: FAL19 Grade Received: F
+===================================
+*******************************
+Enter the name of the Student you wish to remove: Jim
+Student Not Found
+--------------------
+|C.) Create Student|
+--------------------
+--------------------
+|U.) Update Student|
+--------------------
+--------------------
+|D.) Delete Student|
+--------------------
+--------------------
+|E.) Exit          |
+--------------------
+D
+*******************************
+Name: Blaine Mason
+Date of Birth: 09-16-2000
+Major: Art
+Courses Taken:
+===================================
+Course Name: COSC 220 Department: Computer Science Semester: FAL19 Grade Received: C
+===================================
+===================================
+Course Name: ART 101 Department: Art Semester: FAL19 Grade Received: F
+===================================
+*******************************
+Enter the name of the Student you wish to remove: Blaine Mason
+Blaine Mason Removed!
+--------------------
+|C.) Create Student|
+--------------------
+--------------------
+|U.) Update Student|
+--------------------
+--------------------
+|D.) Delete Student|
+--------------------
+--------------------
+|E.) Exit          |
+--------------------
+E
