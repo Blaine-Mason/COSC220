@@ -15,6 +15,7 @@ class HanoiStack{
   public:
     HanoiStack();
     HanoiStack(int);
+    ~HanoiStack();
     void push(Disk*);
     void pop(Disk&);
     void displayStack();

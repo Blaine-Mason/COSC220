@@ -13,10 +13,11 @@ int main(int argc, char** argv){
   s2.displayStack();
   s3.displayStack();
   do{
+    Disk* d = new Disk;
     int from, to;
     std::cout << "Enter the Stack to remove from(1-2-3): " <<std::endl;
     std::cin >> from;
-    Disk* d = new Disk;
+
     switch(from){
       case 1:
         s1.pop(*d);
@@ -28,6 +29,7 @@ int main(int argc, char** argv){
         s3.pop(*d);
         break;
       default:
+        win = true;
         break;
     }
     std::cout << "Enter the Stack to move to(1-2-3): " <<std::endl;
@@ -43,14 +45,13 @@ int main(int argc, char** argv){
         s3.push(d);
         break;
       default:
+        win = true;
         break;
     }
     system("clear");
     s1.displayStack();
     s2.displayStack();
     s3.displayStack();
-
-
   }while(!win);
 
 
