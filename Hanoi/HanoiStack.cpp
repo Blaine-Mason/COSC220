@@ -1,47 +1,66 @@
 #include "HanoiStack.h"
 HanoiStack::HanoiStack(){
-  head = nullptr;
+  top = nullptr;
 }
 HanoiStack::HanoiStack(int s){
-  
+  top = nullptr;
+  for(int i = 1; i <= s; i++){
+    Disk* temp = new Disk;
+    Disk* crsr;
+    temp->size = i;
+    temp->next = nullptr;
+    if(top == nullptr){
+      top = temp;
+      crsr = top;
+    }else{
+      crsr->next = temp;
+      crsr = crsr->next;
+    }
+  }
 }
 
 void HanoiStack::push(Disk* d){
-  Disk* crsr = head;
-  d->next = nullptr;
-  if(crsr == nullptr){
-    head->prev = nullptr;
-    head = d;
+  if(top == nullptr){
+    top = d;
+    top->next = nullptr;
   }else{
-    while(crsr->next != nullptr){
-      crsr = crsr->next;
-    }
-    crsr->next = d;
-    d->prev = crsr;
+    Disk* temp = new Disk;
+    temp->size = d->size;
+    temp->next = top;
+    top = temp;
+
   }
-  last = crsr;
 }
 void HanoiStack::pop(Disk& d){
-  Disk* crsr = head;
-  if(head == nullptr){
+  if(top == nullptr){
     std::cout << "Stack is Empty" << std::endl;
   }else{
-    while(crsr->next){
-      crsr = crsr->next;
-    }
-    d.size = crsr->size;
-    d.next = crsr->next;
-    crsr->prev = crsr->next;
+    d.size = top->size;
+    d.next = top->next;
+    top = top->next;
   }
 }
 void HanoiStack::displayStack(){
-  Disk* crsr = head;
-  while(crsr->next){
-    crsr = crsr->next;
-  }
-  while(crsr){
-    std::cout << 5 << std::endl;
-    crsr = crsr->prev;
-  }
+  if(top == nullptr){
+    for(int i = 0; i < 10; i++){
+      std::cout << "           |          " << std::endl;
+    }
+      std::cout << "======================" << std::endl << std::endl;
+  }else{
+    Disk* crsr = top;
+    while(crsr->next){
+      crsr = crsr->next;
+    }
+    int size = crsr->size;
+    crsr = top;
+    for(int i = 0; i <= 10 - size; i++){
+      std::cout << "           |          " << std::endl;
+    }
+    while(crsr){
+      std::cout << "           " << crsr->size << "          " << std::endl;
+      crsr = crsr->next;
+    }
+      std::cout << "======================" << std::endl << std::endl;
 
+  }
 }
