@@ -1,4 +1,4 @@
-nclude <iostream>
+#include <iostream>
 
 struct Node{
   int value;
@@ -21,8 +21,16 @@ int length(Node* head){
   }
 }
 
-Node* insertSorted(Node* head, int 10){
-  
+Node* insertSorted(Node* head, int n){
+  if(head == nullptr){
+    Node* nNode = new Node(n);
+    return nNode;
+  }
+  if(val < head->value){
+    Node* nNode = new Node(n);
+    nNode->next = head;
+    return nNode;
+  }   
 }
 
 
