@@ -13,6 +13,7 @@ int main(){
   Student s;
   do{
     //Display Menu
+    //Added Print Function
     std::cout << "--------------------" << std::endl << "|C.) Create Student|" << std::endl <<  "--------------------" << std::endl;
     std::cout << "--------------------" << std::endl << "|U.) Update Student|" << std::endl <<  "--------------------" << std::endl;
     std::cout << "--------------------" << std::endl << "|D.) Delete Student|" << std::endl <<  "--------------------" << std::endl;
@@ -102,6 +103,7 @@ int main(){
               std::getline(std::cin, temp);
               updatedSt.setDob(temp);
               std::cout << "DoB Updated!" << std::endl;
+              //Wait and Clear
               usleep(1000000);
               system("clear");
               break;
@@ -110,6 +112,7 @@ int main(){
               std::getline(std::cin, temp);
               updatedSt.setMajor(temp);
               std::cout << "Major Updated!" << std::endl;
+              //Wait and Clear
               usleep(1000000);
               system("clear");
               break;
@@ -161,6 +164,7 @@ int main(){
             break;
           }
         }while(selection != -1);
+        //Wait and Clear
         usleep(1000000);
         system("clear");
         break;
@@ -177,6 +181,7 @@ int main(){
         }
         students.deleteStudent(s);
         std::cout << s.getName() << " Removed!" << std::endl;
+        //Wait and Clear
         usleep(1000000);
         system("clear");
         break;
@@ -187,6 +192,7 @@ int main(){
         students.displayDB();
         std::cout << "Enter C to continue: ";
         std::cin >> c;
+        //Wait and Clear
         usleep(1000000);
         system("clear");
         break;
