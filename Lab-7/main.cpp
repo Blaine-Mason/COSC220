@@ -22,15 +22,23 @@ int length(Node* head){
 }
 
 Node* insertSorted(Node* head, int n){
+  Node* nNode = new Node(n);
   if(head == nullptr){
-    Node* nNode = new Node(n);
+		std::cout << "We Made it" << std::endl;
     return nNode;
   }
-  if(val < head->value){
-    Node* nNode = new Node(n);
+  if(n < head->value){
     nNode->next = head;
+		std::cout << "We sorta Made it" << std::endl;
     return nNode;
-  }   
+  }else{
+		if(head->next
+){
+			std::cout << "Eh" << std::endl;
+			head->next = insertSorted(head->next, n);
+			return head->next;
+		}
+	}
 }
 
 
@@ -49,6 +57,8 @@ int main(){
   n3 = nullptr;
 
   std::cout << length(head) << std::endl;
-  
+ 	head = insertSorted(head, 4);
+	std::cout << length(head) << std::endl; 
+	std::cout << head->value << std::endl;
 }
 
