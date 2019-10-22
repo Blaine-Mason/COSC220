@@ -32,9 +32,7 @@ HanoiStack& HanoiStack::operator+=(HanoiStack rhs){
   }
 }
 HanoiStack::~HanoiStack(){
-  if(top == nullptr){
-    delete top;
-  }else{
+  if(top != nullptr){
     Disk* crsr = top;
     while(crsr){
       crsr = crsr->next;
@@ -62,9 +60,12 @@ void HanoiStack::pop(Disk& d){
   if(top == nullptr){
     std::cout << "Stack is Empty" << std::endl;
   }else{
+    Disk* temp = new Disk;
+    temp = top;
     d.size = top->size;
     d.next = top->next;
     top = top->next;
+    delete temp;
   }
 }
 void HanoiStack::displayStack(){

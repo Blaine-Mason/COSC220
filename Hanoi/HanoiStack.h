@@ -11,6 +11,10 @@ struct Disk{
 
 class HanoiStack{
   private:
+    struct DiskNode{
+      Disk d;
+      int size;
+    }
     Disk* top;
   public:
     HanoiStack();
