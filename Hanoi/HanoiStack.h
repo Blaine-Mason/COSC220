@@ -16,6 +16,7 @@ class HanoiStack{
     HanoiStack();
     HanoiStack(int);
     ~HanoiStack();
+    HanoiStack& operator+=(const HanoiStack rhs);
     void push(Disk*);
     void pop(Disk&);
     void displayStack();

@@ -18,6 +18,19 @@ HanoiStack::HanoiStack(int s){
     }
   }
 }
+HanoiStack& HanoiStack::operator+=(HanoiStack rhs){
+  Disk* left = new Disk;
+  Disk* right = new Disk;
+  this->pop(*left);
+  rhs.pop(*right);
+  if(left->size  > right->size){
+    rhs.push(right);
+    this->push(left);
+  }else{
+    rhs.push(right);
+    rhs.push(left);
+  }
+}
 HanoiStack::~HanoiStack(){
   if(top == nullptr){
     delete top;
