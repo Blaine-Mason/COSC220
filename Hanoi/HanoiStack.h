@@ -6,16 +6,15 @@
 
 struct Disk{
   int size;
-  Disk* next;
 };
 
 class HanoiStack{
   private:
     struct DiskNode{
       Disk d;
-      int size;
-    }
-    Disk* top;
+			DiskNode* next;
+    };
+    DiskNode* top;
   public:
     HanoiStack();
     HanoiStack(int);

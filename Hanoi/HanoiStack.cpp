@@ -5,15 +5,17 @@ HanoiStack::HanoiStack(){
 HanoiStack::HanoiStack(int s){
   top = nullptr;
   for(int i = 0; i < s; i++){
-    Disk* temp = new Disk;
-    Disk* crsr;
-    temp->size = i + 1;
-    temp->next = nullptr;
+    Disk temp;
+		temp.size = i + 1;
+		DiskNode* nNode = new DiskNode; 
+		nNode->d = temp;
+		nNode->next = nullptr;
+    DiskNode* crsr;
     if(top == nullptr){
-      top = temp;
+      top = nNode;
       crsr = top;
     }else{
-      crsr->next = temp;
+      crsr->next = nNode;
       crsr = crsr->next;
     }
   }
@@ -33,7 +35,7 @@ HanoiStack& HanoiStack::operator+=(HanoiStack rhs){
 }
 HanoiStack::~HanoiStack(){
   if(top != nullptr){
-    Disk* crsr = top;
+    DiskNode* crsr = top;
     while(crsr){
       crsr = crsr->next;
       delete top;
@@ -44,14 +46,14 @@ HanoiStack::~HanoiStack(){
 
 void HanoiStack::push(Disk* d){
   if(top == nullptr){
-    top = d;
+    top->d = *d;
     top->next = nullptr;
-  }else if(d->size > top->size){
+  }else if(d->size > top->d.size){
     std::cout << "A disk cannot be placed on top of a smaller one" << std::endl;
     return;
   }else{
-    Disk* temp = new Disk;
-    temp->size = d->size;
+    DiskNode* temp = new DiskNode;
+    temp->d.size = d->size;
     temp->next = top;
     top = temp;
   }
@@ -60,10 +62,8 @@ void HanoiStack::pop(Disk& d){
   if(top == nullptr){
     std::cout << "Stack is Empty" << std::endl;
   }else{
-    Disk* temp = new Disk;
-    temp = top;
-    d.size = top->size;
-    d.next = top->next;
+    DiskNode* temp = top;
+    d.size = top->d.size;
     top = top->next;
     delete temp;
   }
@@ -75,17 +75,17 @@ void HanoiStack::displayStack(){
     }
       std::cout << "======================" << std::endl << std::endl;
   }else{
-    Disk* crsr = top;
+    DiskNode* crsr = top;
     while(crsr->next){
       crsr = crsr->next;
     }
-    int size = crsr->size;
+    int size = crsr->d.size;
     crsr = top;
     for(int i = 0; i <= 10 - size; i++){
       std::cout << "           |          " << std::endl;
     }
     while(crsr){
-      std::cout << "           " << crsr->size << "          " << std::endl;
+      std::cout << "           " << crsr->d.size << "          " << std::endl;
       crsr = crsr->next;
     }
       std::cout << "======================" << std::endl << std::endl;
