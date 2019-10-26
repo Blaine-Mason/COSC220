@@ -6,10 +6,10 @@ HanoiStack::HanoiStack(int s){
   top = nullptr;
   for(int i = 0; i < s; i++){
     Disk temp;
-		temp.size = i + 1;
-		DiskNode* nNode = new DiskNode; 
-		nNode->d = temp;
-		nNode->next = nullptr;
+    temp.size = i + 1;
+    DiskNode* nNode = new DiskNode; 
+    nNode->d = temp;
+    nNode->next = nullptr;
     DiskNode* crsr;
     if(top == nullptr){
       top = nNode;
@@ -23,14 +23,27 @@ HanoiStack::HanoiStack(int s){
 HanoiStack& HanoiStack::operator+=(HanoiStack rhs){
   Disk* left = new Disk;
   Disk* right = new Disk;
+  left->size = 0;
+  right->size = 0;
   this->pop(*left);
   rhs.pop(*right);
-  if(left->size  > right->size){
-    rhs.push(right);
-    this->push(left);
-  }else{
-    rhs.push(right);
+  if(left->size == 0){
+    this->push(right);
+    delete left;
+  }else if(right->size == 0){
     rhs.push(left);
+    delete right;
+  }else{
+    std::cout << "Popped" << std::endl;
+    if(left->size  > right->size){
+      rhs.push(right);
+      this->push(left);
+    }else{
+      std::cout << "Yes Yes" << std::endl;
+      rhs.push(right);
+      rhs.push(left);
+      std::cout << "Pushed Pushed" << std::endl;
+    }
   }
 }
 HanoiStack::~HanoiStack(){
@@ -60,6 +73,7 @@ void HanoiStack::push(Disk* d){
 }
 void HanoiStack::pop(Disk& d){
   if(top == nullptr){
+    d.size = 0;
     std::cout << "Stack is Empty" << std::endl;
   }else{
     DiskNode* temp = top;
