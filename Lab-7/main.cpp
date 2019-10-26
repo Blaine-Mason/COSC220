@@ -30,17 +30,26 @@ Node* insertSorted(Node* head, int n){
   if(n < head->value){
     nNode->next = head;
 		std::cout << "We sorta Made it" << std::endl;
-    return nNode;
   }else{
-		if(head->next
-){
-			std::cout << "Eh" << std::endl;
-			head->next = insertSorted(head->next, n);
-			return head->next;
-		}
+    nNode = insertSorted(head->next, n);
 	}
 }
+void print(Node* head){
+  if(head == nullptr){
+    std::cout << std::endl;
+    return;
+  }
+  std::cout << head->value << " ";
+  print(head->next);
+}
 
+void reversePrint(Node* head){
+  if(head == nullptr){
+    return;
+  }
+  reversePrint(head->next);
+  std::cout << head->value << " ";
+}
 
 
 int main(){
@@ -57,8 +66,12 @@ int main(){
   n3 = nullptr;
 
   std::cout << length(head) << std::endl;
+  print(head);
+  reversePrint(head);
+  std::cout << std::endl;
+
+
  	head = insertSorted(head, 4);
-	std::cout << length(head) << std::endl; 
+	std::cout << length(head) << std::endl;
 	std::cout << head->value << std::endl;
 }
-
