@@ -27,12 +27,17 @@ Node* insertSorted(Node* head, int n){
 		std::cout << "We Made it" << std::endl;
     return nNode;
   }
-  if(n < head->value){
-    nNode->next = head;
-		std::cout << "We sorta Made it" << std::endl;
-  }else{
-    nNode = insertSorted(head->next, n);
-	}
+  if(head->next == nullptr){
+    head->next = nNode;
+    return head->next;
+  }
+  if(n < head->next->value && head->next){
+    nNode->next = head->next;
+		head->next = nNode;
+
+    return nNode;
+  }
+  return insertSorted(head->next, n);
 }
 void print(Node* head){
   if(head == nullptr){
@@ -72,6 +77,5 @@ int main(){
 
 
  	head = insertSorted(head, 4);
-	std::cout << length(head) << std::endl;
-	std::cout << head->value << std::endl;
+	print(head);
 }

@@ -19,7 +19,7 @@ class HanoiStack{
     HanoiStack();
     HanoiStack(int);
     ~HanoiStack();
-    HanoiStack& operator+=(HanoiStack rhs);
+    HanoiStack& operator+=(HanoiStack&);
     void push(Disk);
     void pop(Disk&);
     void displayStack();
