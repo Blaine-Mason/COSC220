@@ -22,15 +22,10 @@ int length(Node* head){
 }
 
 Node* insertSorted(Node* head, int n){
-  if(head == nullptr){
-    Node* nNode = new Node(n);
-    return nNode;
-  }if(head->value > n && head->next != nullptr){
-    std::cout << "Hi" << std::endl;
+  if(head == nullptr || n < head->value){
     Node* nNode = new Node(n);
     return nNode;
   }else{
-    std::cout << "Hey" << std::endl;
     head->next = insertSorted(head->next, n);
     return head;
   }
@@ -53,31 +48,43 @@ void reversePrint(Node* head){
 }
 Node* remove(Node* head, int n){
   if(head == nullptr){
-    Node* nNode = new Node(n);
-    return nNode;
+    return nullptr;
   }if(head->value == n){
-    Node* nNode = new Node;
-    nNode = head;
-    head = head->next;
-    return nNode;
-  }else{
-    head = remove(head->next, n);
+    Node* t = head->next;
+    delete head;
+    return t;
   }
+  head->next = remove(head->next, n);
+  return head;
 }
 Node* appendList(Node* head, Node* head2){
-  if(head2->next != nullptr){
-    head->next = head2;
+  if(head == nullptr){
+    return head2;
+  }if(head2 == nullptr){
     return head;
   }else{
-     return appendList(head->next, head2);
+     Node* c = appendList(head->next, head);
+     c->next = head2;
   }
+  return head;
 }
 Node* reverse(Node* head){
   if(head->next == nullptr){
     return head;
-  }else{
-    head = reverse(head->next);
-    return reverse(head);
+  }
+  Node* nNode = reverse(head->next);
+  head->next->next = head;
+  head->next = nullptr;
+  return nNode;
+}
+void deleteLists(Node* head){
+  if(head != nullptr){
+    Node* crsr = head;
+    while(crsr){
+      crsr = crsr->next;
+      delete head;
+      head = crsr;
+    }
   }
 }
 
@@ -94,35 +101,48 @@ int main(){
   n2->next = n3;
   n3->next = nullptr;
 
+  std::cout << "Length Test: " << std::endl;
   std::cout << length(head) << std::endl;
+  std::cout << "Print Test: " << std::endl;
   print(head);
+  std::cout << "Reverse Print Test: " << std::endl;
   reversePrint(head);
   std::cout << std::endl;
 
+  std::cout << "insertSorted Test(value 4): " << std::endl;
+ 	head = insertSorted(head, 4);
+	print(head);
 
- 	//head = insertSorted(head, 2);
-	//print(head);
-
+  std::cout << "Remove Test: " << std::endl;
   Node* removedNode = new Node;
   removedNode = remove(head, 2);
   print(head);
+  std::cout << "Removed Node: " << std::endl;
   std::cout << removedNode->value << std::endl;
 
   Node* head2 = nullptr;
   Node* n4 = new Node;
   Node* n5 = new Node;
   Node* n6 = new Node;
-  n4->value = 4;
-  n5->value = 5;
-  n6->value = 6;
+  n4->value = 6;
+  n5->value = 7;
+  n6->value = 8;
   head2 = n4;
   head2->next = n5;
   n5->next = n6;
   n6->next = nullptr;
 
-  head = appendList(head, head2);
+  std::cout << "appendList Test: " << std::endl;
+  //head = appendList(head, head2);
   print(head);
 
-  head = reverse(head);
-  print(head);
+  std::cout << "Reverse Test: " << std::endl;
+  head2 = reverse(head2);
+  print(head2);
+  delete removedNode;
+  deleteLists(head);
+  deleteLists(head2);
+
+
+
 }
