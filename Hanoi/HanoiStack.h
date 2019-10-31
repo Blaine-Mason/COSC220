@@ -12,15 +12,15 @@ class HanoiStack{
   private:
     struct DiskNode{
       Disk d;
-      DiskNode* next;
+			DiskNode* next;
     };
     DiskNode* top;
   public:
     HanoiStack();
     HanoiStack(int);
     ~HanoiStack();
-    HanoiStack& operator+=(HanoiStack&);
-    void push(Disk);
+    HanoiStack& operator+=(const HanoiStack rhs);
+    void push(Disk*);
     void pop(Disk&);
     void displayStack();
 

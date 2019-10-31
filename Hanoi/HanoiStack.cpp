@@ -6,10 +6,10 @@ HanoiStack::HanoiStack(int s){
   top = nullptr;
   for(int i = 0; i < s; i++){
     Disk temp;
-    temp.size = i + 1;
-    DiskNode* nNode = new DiskNode;
-    nNode->d = temp;
-    nNode->next = nullptr;
+		temp.size = i + 1;
+		DiskNode* nNode = new DiskNode;
+		nNode->d = temp;
+		nNode->next = nullptr;
     DiskNode* crsr;
     if(top == nullptr){
       top = nNode;
@@ -20,28 +20,17 @@ HanoiStack::HanoiStack(int s){
     }
   }
 }
-HanoiStack& HanoiStack::operator+=(HanoiStack& rhs){
-  Disk left;
-  Disk right;
-  this->pop(left);
-  rhs.pop(right);
-  if(left.size != 0 && right.size != 0){
-    if(left.size  > right.size){
-      rhs.push(right);
-      this->push(left);
-      return *this;
-    }else{
-      rhs.push(right);
-      rhs.push(left);
-      return *this;
-    }
+HanoiStack& HanoiStack::operator+=(HanoiStack rhs){
+  Disk* left = new Disk;
+  Disk* right = new Disk;
+  this->pop(*left);
+  rhs.pop(*right);
+  if(left->size  > right->size){
+    rhs.push(right);
+    this->push(left);
   }else{
-    if(left.size == 0){
-      this->push(right);
-    }
-    if(right.size == 0){
-      rhs.push(left);
-    }
+    rhs.push(right);
+    rhs.push(left);
   }
 }
 HanoiStack::~HanoiStack(){
@@ -55,22 +44,23 @@ HanoiStack::~HanoiStack(){
   }
 }
 
-void HanoiStack::push(Disk d){
+void HanoiStack::push(Disk* d){
   if(top == nullptr){
-    DiskNode* nNode = new DiskNode;
-    nNode->d.size = d.size;
-    nNode->next = nullptr;
-    top = nNode;
+    top->d = *d;
+    top->next = nullptr;
+  }else if(d->size > top->d.size){
+    std::cout << "A disk cannot be placed on top of a smaller one" << std::endl;
+    return;
   }else{
     DiskNode* temp = new DiskNode;
-    temp->d.size = d.size;
+    temp->d.size = d->size;
     temp->next = top;
     top = temp;
   }
 }
 void HanoiStack::pop(Disk& d){
   if(top == nullptr){
-    return;
+    std::cout << "Stack is Empty" << std::endl;
   }else{
     DiskNode* temp = top;
     d.size = top->d.size;
