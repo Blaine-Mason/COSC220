@@ -20,22 +20,26 @@ HanoiStack::HanoiStack(int s){
     }
   }
 }
-HanoiStack& HanoiStack::operator+=(HanoiStack rhs){
+HanoiStack& HanoiStack::operator+=(HanoiStack& rhs){
   Disk left;
   Disk right;
   this->pop(left);
   rhs.pop(right);
-  if(left.size == 0){
+  if(left.size == 0){ 
     this->push(right);
+    return *this;
   }else if(right.size == 0){
     rhs.push(left);
+    return *this;
   }else{
     if(left.size  > right.size){
       rhs.push(right);
       this->push(left);
+      return *this;
     }else{
       rhs.push(right);
       rhs.push(left);
+      return *this;
     }
   }
 }
