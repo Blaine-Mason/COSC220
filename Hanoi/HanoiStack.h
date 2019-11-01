@@ -16,9 +16,10 @@ class HanoiStack{
       DiskNode* next;
     };
     DiskNode* top;
+    int initsize;
   public:
     HanoiStack();
-    HanoiStack(int);
+    HanoiStack(int, bool);
     ~HanoiStack();
     HanoiStack& operator+=(HanoiStack& rhs);
     void push(Disk);

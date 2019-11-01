@@ -2,22 +2,27 @@
 HanoiStack::HanoiStack(){
   top = nullptr;
 }
-HanoiStack::HanoiStack(int s){
+HanoiStack::HanoiStack(int s, bool first){
   top = nullptr;
-  for(int i = 0; i < s; i++){
-    Disk temp;
-		temp.size = i + 1;
-		DiskNode* nNode = new DiskNode;
-		nNode->d = temp;
-		nNode->next = nullptr;
-    DiskNode* crsr;
-    if(top == nullptr){
-      top = nNode;
-      crsr = top;
-    }else{
-      crsr->next = nNode;
-      crsr = crsr->next;
+  if(first){
+    initsize = s;
+    for(int i = 0; i < s; i++){
+      Disk temp;
+  		temp.size = i + 1;
+  		DiskNode* nNode = new DiskNode;
+  		nNode->d = temp;
+  		nNode->next = nullptr;
+      DiskNode* crsr;
+      if(top == nullptr){
+        top = nNode;
+        crsr = top;
+      }else{
+        crsr->next = nNode;
+        crsr = crsr->next;
+      }
     }
+  }else{
+    initsize = s;
   }
 }
 HanoiStack& HanoiStack::operator+=(HanoiStack& rhs){
@@ -25,7 +30,7 @@ HanoiStack& HanoiStack::operator+=(HanoiStack& rhs){
   Disk right;
   this->pop(left);
   rhs.pop(right);
-  if(left.size == 0){ 
+  if(left.size == 0){
     this->push(right);
     return *this;
   }else if(right.size == 0){
@@ -71,26 +76,49 @@ void HanoiStack::pop(Disk& d){
   }
 }
 void HanoiStack::displayStack(){
-  if(top == nullptr){
-    for(int i = 0; i < 10; i++){
-      std::cout << "           |          " << std::endl;
-    }
-      std::cout << "======================" << std::endl << std::endl;
-  }else{
+  int spacing;
+  std::cout << std::endl;
+  if(top != nullptr){
     DiskNode* crsr = top;
     while(crsr->next){
       crsr = crsr->next;
     }
-    int size = crsr->d.size;
     crsr = top;
-    for(int i = 0; i <= 10 - size; i++){
-      std::cout << "           |          " << std::endl;
-    }
+    spacing = initsize;
     while(crsr){
-      std::cout << "           " << crsr->d.size << "          " << std::endl;
+      for(int i = spacing; i > 0; i--){
+        std::cout << " ";
+      }
+      for(int i = 0; i < (crsr->d.size); i++){
+        std::cout << "#";
+      }
+      std::cout << "|";
+      for(int i = 0; i < (crsr->d.size); i++){
+        std::cout << "#";
+      }
+      std::cout << std::endl;
       crsr = crsr->next;
+      spacing--;
     }
-      std::cout << "======================" << std::endl << std::endl;
-
+    for(int j = 0; j <= (initsize*2) + 2; j++){
+      std::cout << "=";
+    }
+    std::cout << std::endl;
+  }else{
+    spacing = initsize;
+    for(int k = 0; k <= initsize - 1; k++){
+      for(int i = spacing; i >= 0; i--){
+        std::cout << " ";
+      }
+      std::cout << "|";
+      for(int i = spacing; i >= 0; i--){
+        std::cout << " ";
+      }
+      std::cout << std::endl;
+    }
+    for(int j = 0; j <= (initsize*2) + 2; j++){
+      std::cout << "=";
+    }
+    std::cout << std::endl;
   }
 }
