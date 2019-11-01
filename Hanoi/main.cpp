@@ -5,9 +5,9 @@
 
 int main(int argc, char** argv){
 
-  HanoiStack s1(atoi(argv[1]));
-  HanoiStack s2;
-  HanoiStack s3;
+  HanoiStack s1(atoi(argv[1]), true);
+  HanoiStack s2(atoi(argv[1]), false);
+  HanoiStack s3(atoi(argv[1]), false);
   bool win = false;
   s1.displayStack();
   s2.displayStack();

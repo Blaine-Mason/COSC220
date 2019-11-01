@@ -1,3 +1,4 @@
+
 #ifndef HANOISTACK_H
 #define HANOISTACK_H
 
@@ -15,11 +16,12 @@ class HanoiStack{
       DiskNode* next;
     };
     DiskNode* top;
+    int initsize;
   public:
     HanoiStack();
-    HanoiStack(int);
+    HanoiStack(int, bool);
     ~HanoiStack();
-    HanoiStack& operator+=(HanoiStack rhs);
+    HanoiStack& operator+=(HanoiStack& rhs);
     void push(Disk);
     void pop(Disk&);
     void displayStack();
