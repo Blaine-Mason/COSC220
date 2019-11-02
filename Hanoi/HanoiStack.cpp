@@ -90,7 +90,7 @@ void HanoiStack::displayStack(){
       size++;
     }
     crsr = top;
-    spacing = initsize;
+    spacing = max - 1;
     for(int noDisk = 0; noDisk < initsize - size; noDisk++){
       std::cout << "     |" << std::endl;
     }
