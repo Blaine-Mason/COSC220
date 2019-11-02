@@ -76,33 +76,46 @@ void HanoiStack::pop(Disk& d){
   }
 }
 void HanoiStack::displayStack(){
-  int spacing;
+  int spacing, size;
   std::cout << std::endl;
   if(top != nullptr){
     DiskNode* crsr = top;
     while(crsr->next){
       crsr = crsr->next;
     }
+    int max = crsr->d.size;
+    crsr = top;
+    while(crsr){
+      crsr = crsr->next;
+      size++;
+    }
     crsr = top;
     spacing = initsize;
+    for(int noDisk = 0; noDisk < initsize - size; noDisk++){
+      std::cout << "     |" << std::endl;
+    }
     while(crsr){
-      for(int i = spacing; i > 0; i--){
+      for(int prespacing = spacing; prespacing > 0; prespacing--){
         std::cout << " ";
       }
-      for(int i = 0; i < (crsr->d.size); i++){
+      for(int pound = 0; pound < crsr->d.size; pound++){
         std::cout << "#";
       }
       std::cout << "|";
-      for(int i = 0; i < (crsr->d.size); i++){
+      for(int pound = 0; pound < crsr->d.size; pound++){
         std::cout << "#";
       }
+      for(int postspacing = 0;  postspacing  < (crsr->d.size)/2; postspacing++){
+        std::cout << " ";
+      }
+      spacing--;
       std::cout << std::endl;
       crsr = crsr->next;
-      spacing--;
     }
     for(int j = 0; j <= (initsize*2) + 2; j++){
       std::cout << "=";
     }
+    size = 0;
     std::cout << std::endl;
   }else{
     spacing = initsize;
