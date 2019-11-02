@@ -2,7 +2,18 @@
 #include <string>
 #include <stdio.h>
 #include "HanoiStack.h"
-
+/*
+* SolveHanoi
+* -Dr. Anderson
+*/
+void SolveHanoi(int n, int start, int end, int tmp){
+ if( n >= 1 ){
+   SolveHanoi(n-1, start, tmp, end);
+   printf("Move disc %d from %d to %d.\n",
+       n, start, end);
+   SolveHanoi(n-1, tmp, end, start);
+ }
+}
 int main(int argc, char** argv){
 
   HanoiStack s1(atoi(argv[1]), true);
@@ -73,9 +84,14 @@ int main(int argc, char** argv){
         break;
     }
     system("clear");
-    s1.displayStack();
-    s2.displayStack();
-    s3.displayStack();
+    std::cout << s1;
+    std::cout << s2;
+    std::cout << s3;
+    //s1.displayStack();
+    //s2.displayStack();
+    //s3.displayStack();
+    s2.winCondition(win);
+    s3.winCondition(win);
   }while(!win);
 
 

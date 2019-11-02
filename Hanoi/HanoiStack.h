@@ -21,7 +21,10 @@ class HanoiStack{
     HanoiStack();
     HanoiStack(int, bool);
     ~HanoiStack();
+    //EC
+    void winCondition(bool& win);
     HanoiStack& operator+=(HanoiStack& rhs);
+    friend std::ostream& operator<<(std::ostream &out, const HanoiStack&);
     void push(Disk);
     void pop(Disk&);
     void displayStack();

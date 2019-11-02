@@ -48,6 +48,57 @@ HanoiStack& HanoiStack::operator+=(HanoiStack& rhs){
     }
   }
 }
+std::ostream& operator<<(std::ostream &out, const HanoiStack& stack){
+  int spacing = stack.initsize;
+  if(stack.top == nullptr){
+    for(int k = 0; k <= stack.initsize - 1; k++){
+      for(int i = spacing; i >= 0; i--){
+        out << " ";
+      }
+      out << "|";
+      for(int i = spacing; i >= 0; i--){
+        out << " ";
+      }
+      out << std::endl;
+    }
+    for(int j = 0; j <= (stack.initsize*2) + 2; j++){
+      out << "=";
+    }
+    out << std::endl;
+  }else{
+    HanoiStack::DiskNode* crsr = stack.top;
+    int count = 0;
+    while(crsr->next){
+      crsr = crsr->next;
+      count++;
+    }
+    int size = crsr->d.size;
+    count += 1;
+    crsr = stack.top;
+    for(int k = 0; k < stack.initsize - count; k++){
+      for(int i = spacing; i >= 0; i--){
+        out << " ";
+      }
+      out << "|" << std::endl;
+    }
+    count = 0;
+    while(crsr){
+      if(crsr->d.size != 0){
+        for(int i = spacing; i >= 0; i--){
+          out << " ";
+        }
+        out << crsr->d.size << std::endl;
+      }
+        crsr = crsr->next;
+
+    }
+    for(int j = 0; j <= (stack.initsize*2) + 2; j++){
+      out << "=";
+    }
+    out << std::endl;
+  }
+  return out;
+}
 HanoiStack::~HanoiStack(){
   if(top != nullptr){
     DiskNode* crsr = top;
@@ -58,7 +109,23 @@ HanoiStack::~HanoiStack(){
     }
   }
 }
-
+void HanoiStack::winCondition(bool& win){
+  if(this->top == nullptr){
+    return;
+  }
+  DiskNode* crsr = this->top;
+  int winner = 0;
+  while(crsr){
+    winner++;
+    crsr = crsr->next;
+  }
+  std::cout << winner << std::endl;
+  if(winner == initsize){
+    win = true;
+  }else{
+    win = false;
+  }
+}
 void HanoiStack::push(Disk d){
   DiskNode* temp = new DiskNode;
   temp->d.size = d.size;
@@ -67,6 +134,7 @@ void HanoiStack::push(Disk d){
 }
 void HanoiStack::pop(Disk& d){
   if(top == nullptr){
+    d.size = 0;
     std::cout << "Stack is Empty" << std::endl;
   }else{
     DiskNode* temp = top;
@@ -76,49 +144,8 @@ void HanoiStack::pop(Disk& d){
   }
 }
 void HanoiStack::displayStack(){
-  int spacing, size;
-  std::cout << std::endl;
-  if(top != nullptr){
-    DiskNode* crsr = top;
-    while(crsr->next){
-      crsr = crsr->next;
-    }
-    int max = crsr->d.size;
-    crsr = top;
-    while(crsr){
-      crsr = crsr->next;
-      size++;
-    }
-    crsr = top;
-    spacing = max - 1;
-    for(int noDisk = 0; noDisk < initsize - size; noDisk++){
-      std::cout << "     |" << std::endl;
-    }
-    while(crsr){
-      for(int prespacing = spacing; prespacing > 0; prespacing--){
-        std::cout << " ";
-      }
-      for(int pound = 0; pound < crsr->d.size; pound++){
-        std::cout << "#";
-      }
-      std::cout << "|";
-      for(int pound = 0; pound < crsr->d.size; pound++){
-        std::cout << "#";
-      }
-      for(int postspacing = 0;  postspacing  < (crsr->d.size)/2; postspacing++){
-        std::cout << " ";
-      }
-      spacing--;
-      std::cout << std::endl;
-      crsr = crsr->next;
-    }
-    for(int j = 0; j <= (initsize*2) + 2; j++){
-      std::cout << "=";
-    }
-    size = 0;
-    std::cout << std::endl;
-  }else{
-    spacing = initsize;
+  int spacing = initsize;
+  if(top == nullptr){
     for(int k = 0; k <= initsize - 1; k++){
       for(int i = spacing; i >= 0; i--){
         std::cout << " ";
@@ -128,6 +155,37 @@ void HanoiStack::displayStack(){
         std::cout << " ";
       }
       std::cout << std::endl;
+    }
+    for(int j = 0; j <= (initsize*2) + 2; j++){
+      std::cout << "=";
+    }
+    std::cout << std::endl;
+  }else{
+    DiskNode* crsr = top;
+    int count = 0;
+    while(crsr->next){
+      crsr = crsr->next;
+      count++;
+    }
+    int size = crsr->d.size;
+    count += 1;
+    crsr = top;
+    for(int k = 0; k < initsize - count; k++){
+      for(int i = spacing; i >= 0; i--){
+        std::cout << " ";
+      }
+      std::cout << "|" << std::endl;
+    }
+    count = 0;
+    while(crsr){
+      if(crsr->d.size != 0){
+        for(int i = spacing; i >= 0; i--){
+          std::cout << " ";
+        }
+        std::cout << crsr->d.size << std::endl;
+      }
+        crsr = crsr->next;
+
     }
     for(int j = 0; j <= (initsize*2) + 2; j++){
       std::cout << "=";
