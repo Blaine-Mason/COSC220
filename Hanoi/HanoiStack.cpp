@@ -125,20 +125,6 @@ std::ostream& operator<<(std::ostream &out, const HanoiStack& stack){
   return out;
 }
 /*
-* Destructor
-*/
-HanoiStack::~HanoiStack(){
-  //if the top exists, delete that stuff
-  if(top != nullptr){
-    DiskNode* crsr = top;
-    while(crsr){
-      crsr = crsr->next;
-      delete top;
-      top = crsr;
-    }
-  }
-}
-/*
 * Win Condition Checker
 */
 void HanoiStack::winCondition(bool& win){
@@ -155,6 +141,12 @@ void HanoiStack::winCondition(bool& win){
   }
   std::cout << winner << std::endl;
   if(winner == initsize){
+    crsr = this->top;
+    while(crsr){
+      crsr = crsr->next;
+      this->pop(top->d);
+      top = crsr;
+    }
     win = true;
   }else{
     win = false;

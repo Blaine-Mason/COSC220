@@ -23,8 +23,6 @@ class HanoiStack{
   public:
     //Constructor
     HanoiStack(int, bool);
-    //Destructor
-    ~HanoiStack();
     //EC
     void winCondition(bool& win);
     //Operator += overload
