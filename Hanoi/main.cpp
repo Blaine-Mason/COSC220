@@ -38,7 +38,7 @@ int main(int argc, char** argv){
   std::cout << "-------------------------------------------------" << std::endl;
   std::cout << "Eneter your first name to begin:";
   std::cin >> name;
-  system("clear");
+  //system("clear");
 
   //display stacks
   std::cout << s1;
@@ -120,7 +120,7 @@ int main(int argc, char** argv){
         break;
     }
 
-    system("clear");
+    //system("clear");
 
     if(solution1 && solution2){
       std::cout << "Solution Starting at 1, ending at 2, using 3: " << std::endl;
