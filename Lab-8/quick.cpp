@@ -2,32 +2,49 @@
 #include <stdio.h>
 #include <chrono>
 #include <time.h>
+/*
+* Blaine Mason
+*/
+
+
+
+/*
+* Swap Funcation
+*/
 void swap(int &val1, int &val2){
   int temp = val1;
   val1 = val2;
   val2 = temp;
 }
+/*
+* makeArray fills an array with some size passed in
+* with random integers
+*/
 void makeArray(int arr[], int s){
   srand(time(NULL));
   int n = 100;
   for(int i = 0; i < s; i++){
     arr[i] = rand() % n + 1;
-  }  
+  }
 }
-
+/*
+* Partition chooses a pivot and sorts accordingly
+*/
 int partition(int arr[], int start, int end){
   int piviotV = arr[start];
   int i = start + 1;
   for(int j  = start + 1; j <= end; j++){
     if(arr[j] < piviotV){
-      swap(arr[i], arr[j]);
+      swap(arr[j], arr[i]);
       i++;
-
     }
   }
   swap(arr[start], arr[i - 1]);
   return i - 1;
 }
+/*
+* Quicksort Algorithm
+*/
 void quicksort(int arr[], int start, int end){
   int piviot;
   if(start <= end -1){
@@ -82,25 +99,18 @@ int main(){
   for(int i = 0; i < 15;  i++){
     std::cout << qTest[i] << " ";
   }
-  std::cout << std::endl; 
+  std::cout << std::endl;
 
 
   srand(time(NULL));
-  int size = 1000000;
+  int size = 10000;
   int randTest[size];
   makeArray(randTest, size);
 
   std::cout << "Quicksort Size: " << size << std::endl;
   auto start = std::chrono::system_clock::now();
   quicksort(randTest, 0, size -1);
-  /*
-  for(int i = 0; i < size; i++){
-    std::cout << randTest[i] << " ";
-    if(i % 10 == 0){
-      std::cout << std::endl;
-    }
-  }
-  */
+
   auto end = std::chrono::system_clock::now();
   std::chrono::duration<double> elapsed_seconds = end-start;
   std::time_t end_time = std::chrono::system_clock::to_time_t(end);
