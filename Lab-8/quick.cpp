@@ -5,8 +5,17 @@
 /*
 * Blaine Mason
 */
-
-
+/*
+* Sorted is something sorted sort
+*/
+bool isSorted(int arr[], int len){
+  for(int i = 0; i < len; i++){
+    if(arr[i] > arr[i + 1]){
+      return false;
+    }
+  }
+  return true;
+}
 
 /*
 * Swap Funcation
@@ -103,7 +112,7 @@ int main(){
 
 
   srand(time(NULL));
-  int size = 10000;
+  int size = 100;
   int randTest[size];
   makeArray(randTest, size);
 
@@ -117,6 +126,18 @@ int main(){
   std::cout << "finished at " << std::ctime(&end_time)
   << "elapsed time: " << elapsed_seconds.count() << "s\n";
 
+  for(int i = 0; i < size; i++){
+    std::cout << randTest[i] << " ";
+    if(i % 10 == 0){
+      std::cout << std::endl;
+    }
+  }
+
+  if(isSorted(randTest, size)){
+    std::cout << "It is sorted" << std::endl;
+  }else{
+    std::cout << "Nope" << std::endl;
+  }
 
 
 
