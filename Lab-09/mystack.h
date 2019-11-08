@@ -10,4 +10,8 @@ class MyStack{
       Node* next;
     };
 /* Fill in stack operations: push, pop, peek */
+  public:
+    PayRollStack::PayRollStack(){
+      head = nullptr;
+    }
 }
