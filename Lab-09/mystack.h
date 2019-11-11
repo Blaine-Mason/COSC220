@@ -17,7 +17,7 @@ class MyStack{
     MyStack(const MyStack&);
     MyStack& operator=(const MyStack&);
     void push(T);
-    void pop(T &);
+    void pop(T&);
     T peek();
     void displayStack();
 };
@@ -39,21 +39,51 @@ MyStack<T>::~MyStack(){
 template <class T>
 MyStack<T>::MyStack(const MyStack& rhs){
   Node* crsr = rhs.top;
-  top = nullptr;
+  int count = 0;
   while(crsr){
-    push(crsr->data);
+    count++;
     crsr = crsr->next;
+  }
+  crsr = rhs.top;
+  Node* temp = rhs.top;
+  top = nullptr;
+  for(crsr = rhs.top; crsr; crsr = crsr->next){
+    for(int i = 0; i < count - 1; i++){
+      temp = temp->next;
+    }
+    push(temp->data);
+    temp = rhs.top;
+    count--;
   }
 }
 template <class T>
 MyStack<T>& MyStack<T>::operator=(const MyStack<T>& rhs){
+  int count = 0;
   Node* crsr = rhs.top;
   if( this == &rhs){
     std::cout << "The Same" << std::endl;
   }else{
+    Node* crsr = this->top;
     while(crsr){
-      push(crsr->data);
+      Node* nextN = crsr->next;
+      delete crsr;
+      crsr = nextN;
+    }
+    crsr = rhs.top;
+    while(crsr){
+      count++;
       crsr = crsr->next;
+    }
+    crsr = rhs.top;
+    Node* temp = rhs.top;
+    this->top = nullptr;
+    for(crsr = rhs.top; crsr; crsr = crsr->next){
+      for(int i = 0; i < count - 1; i++){
+        temp = temp->next;
+      }
+      this->push(temp->data);
+      temp = rhs.top;
+      count--;
     }
     return *this;
   }
