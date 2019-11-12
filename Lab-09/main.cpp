@@ -6,6 +6,8 @@ int main(){
    MyStack<int> intStack;
    MyStack<std::string> stringStack;
    MyStack<PayRoll> pStack;
+
+   //Int Test
    int temp = 0;
    std::cout << "Pushing: 10, 20, 30" << std::endl << std::endl;
    intStack.push(10);
@@ -33,7 +35,7 @@ int main(){
    intStack.displayStack();
    std::cout << std::endl;
 
-
+   //String Test
    std::string str = "";
    std::cout << "Pushing: 'Eggs', 'Bacon', 'Cheese' " << std::endl << std::endl;
    stringStack.push("Eggs");
@@ -61,7 +63,7 @@ int main(){
    stringStack.displayStack();
    std::cout << std::endl;
 
-
+   //PayRoll Test
    PayRoll p1("Blaine", 8.00, 40);
    PayRoll p2("Not Blaine", 10.30, 23);
    PayRoll p3("Luke", 7.50, 20);

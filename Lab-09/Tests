@@ -1,0 +1,132 @@
+==4336== Memcheck, a memory error detector
+==4336== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
+==4336== Using Valgrind-3.13.0 and LibVEX; rerun with -h for copyright info
+==4336== Command: ./main
+==4336==
+Pushing: 10, 20, 30
+
+30 20 10
+Popping: 30
+
+20 10
+Copying and Assigning...
+Copy Constructor and Assignment Operator Output:
+
+Copy Constructor
+20 10
+Assignment Operator
+20 10
+Popping: 20
+
+10
+Peek: 10
+
+Final Stack
+10
+
+Pushing: 'Eggs', 'Bacon', 'Cheese'
+
+Cheese Bacon Eggs
+Popping: 'Cheese'
+Bacon Eggs
+Copying and Assigning...
+Copy Constructor and Assignment Operator Output:
+
+Copy Constructor
+Bacon Eggs
+Assignment Operator
+Bacon Eggs
+Popping: 'Bacon'
+
+Eggs
+Peek: Eggs
+
+Final Stack
+Eggs
+
+Pushing: 'Blaine', 'Not Blaine', 'Luke'
+
+=============================
+Employee: Luke
+PayRate: 7.5
+Total Pay: 150$
+=============================
+
+ =============================
+Employee: Not Blaine
+PayRate: 10.3
+Total Pay: 236.9$
+=============================
+
+ =============================
+Employee: Blaine
+PayRate: 8
+Total Pay: 320$
+=============================
+
+
+Popping: Luke
+Copying and Assigning...
+Copy Constructor and Assignment Operator Output:
+
+Copy Constructor
+=============================
+Employee: Not Blaine
+PayRate: 10.3
+Total Pay: 236.9$
+=============================
+
+ =============================
+Employee: Blaine
+PayRate: 8
+Total Pay: 320$
+=============================
+
+
+Assignment Operator
+=============================
+Employee: Not Blaine
+PayRate: 10.3
+Total Pay: 236.9$
+=============================
+
+ =============================
+Employee: Blaine
+PayRate: 8
+Total Pay: 320$
+=============================
+
+
+Popping: Not Blaine
+=============================
+Employee: Blaine
+PayRate: 8
+Total Pay: 320$
+=============================
+
+
+Peek:
+=============================
+Employee: Blaine
+PayRate: 8
+Total Pay: 320$
+=============================
+
+
+Final Stack
+=============================
+Employee: Blaine
+PayRate: 8
+Total Pay: 320$
+=============================
+
+
+==4336==
+==4336== HEAP SUMMARY:
+==4336==     in use at exit: 0 bytes in 0 blocks
+==4336==   total heap usage: 38 allocs, 38 frees, 74,649 bytes allocated
+==4336==
+==4336== All heap blocks were freed -- no leaks are possible
+==4336==
+==4336== For counts of detected and suppressed errors, rerun with: -v
+==4336== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
