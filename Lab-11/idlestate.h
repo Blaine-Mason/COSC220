@@ -10,6 +10,8 @@
 #include <stdlib.h>
 #include "gamestate.h"
 #include "travelstate.h"
+#include "livingentity.h"
+#include "player.h"
 
 class IdleState : public GameState{
   private:
@@ -23,7 +25,7 @@ class IdleState : public GameState{
 
     void printOptions() override;
 
-    void handleInput(int, std::stack<GameState*>&) override;
+    void handleInput(int, std::stack<GameState*>&, Player&) override;
 };
 
 #endif

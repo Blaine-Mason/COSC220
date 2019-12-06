@@ -10,12 +10,16 @@ void IdleState::printOptions(){
 	std::cout << "1.) " << choices[CONTINUE_OPTION] << std::endl;
 	std::cout << "2.) " << choices[LEAVE_OPTION] << std::endl;
 }
-void IdleState::handleInput(int choice, std::stack<GameState*>& states){
+void IdleState::handleInput(int choice, std::stack<GameState*>& states, Player& p){
 	GameState* next = nullptr;
 	GameState* old = nullptr;
 
 	switch(choice){
 		case CONTINUE_OPTION:
+			p.printStats();
+			if(p.hp_curr <= p.hp_max){
+				p.hp_curr += 10;
+			}
 			old = states.top();
 			states.pop();
 			delete old;

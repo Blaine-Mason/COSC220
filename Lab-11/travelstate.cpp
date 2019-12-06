@@ -23,7 +23,7 @@ void TravelState::printOptions() {
   }
 };
 
-void TravelState::handleInput(int choice, std::stack<GameState*>& states) {
+void TravelState::handleInput(int choice, std::stack<GameState*>& states, Player& p) {
   // Temp variable to hold the new game state
   GameState* next = nullptr;
 

@@ -4,11 +4,12 @@
 #include <iostream>
 #include <stdlib.h>
 #include "gamestate.h" // GameState
+#include "livingentity.h"
+#include "monster.h"
 
 class CombatState : public GameState {
   private:
-    int enemyHealth = 100;
-
+    Monster mon;
     enum Choices {
       ATTACK_OPTION = '1',
       FLEE_OPTION   = '2'
@@ -16,7 +17,7 @@ class CombatState : public GameState {
   public:
     CombatState();
     void printOptions() override;
-    void handleInput(int, std::stack<GameState*>&) override;
+    void handleInput(int, std::stack<GameState*>&, Player&) override;
 };
 
 #endif

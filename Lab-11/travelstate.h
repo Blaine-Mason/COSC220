@@ -3,6 +3,7 @@
 
 #include "gamestate.h"
 #include "idlestate.h"
+#include "livingentity.h"
 #include <stdlib.h>
 #include <time.h>
 #include <list>
@@ -27,6 +28,7 @@ class TravelState : public GameState {
 
   public:
     TravelState(std::string dir){
+      combatProbability = 20;
       direction = dir;
 
       // Randomly add a fork in the road
@@ -58,7 +60,7 @@ class TravelState : public GameState {
 
     void printOptions() override;
 
-    void handleInput(int, std::stack<GameState*>&) override;
+    void handleInput(int, std::stack<GameState*>&, Player&) override;
 
 };
 

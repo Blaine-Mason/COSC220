@@ -1,6 +1,9 @@
 #include<iostream>
 #include "gamestate.h"
 #include "travelstate.h"
+#include "combatstate.h"
+#include "livingentity.h"
+#include "player.h"
 
 /*
  * Main function contains the main game loop.
@@ -22,14 +25,16 @@
  */
 
 int main(){
-  int input;
+  int input, combatRoll;
   std::stack<GameState*> stateStack;
 
 
   // GameState is an abstract base class,
   // so currentState will have to actually
   // point to one of its subclasses
+  Player pc;
   GameState* currentState = nullptr;
+  CombatState* cs = nullptr;;
 
   // Start the user off in a travel state, headed north
   TravelState* t = new TravelState("North");
@@ -37,6 +42,16 @@ int main(){
 
   while(true){
     currentState = stateStack.top();
+
+    if (currentState->combatProbability > 0){
+      combatRoll = rand() % 100 + 1;
+      if (combatRoll < currentState->combatProbability){
+        std::cout << "You get attacked" << std::endl;
+        cs = new CombatState();
+        stateStack.push(cs);
+        currentState = cs;
+      }
+    }
     // 1. Get options from the state
     currentState->printOptions();
 
@@ -44,6 +59,6 @@ int main(){
     std::cin >> input;
 
     // 3. Pass input to the state, and get the new state
-    currentState->handleInput(input, stateStack);
+    currentState->handleInput(input, stateStack, pc);
   }
 }

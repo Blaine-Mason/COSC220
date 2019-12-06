@@ -4,6 +4,9 @@
 #include<map>
 #include <iostream>
 #include <stack>
+#include "livingentity.h"
+#include "player.h"
+
 
 class GameState {
   protected:
@@ -15,13 +18,13 @@ class GameState {
     virtual ~GameState(){};
     // TODO: each state should have a chance of
     // the user getting attacked
-    double combatProbability;
+    double combatProbability = 0;
 
     // prints all options available to the user in this state
     virtual void printOptions() = 0;
 
     // will take the input and handle it appropriately
-    virtual void handleInput(int, std::stack<GameState*>&) = 0;
+    virtual void handleInput(int, std::stack<GameState*>&, Player&) = 0;
 };
 
 #endif
