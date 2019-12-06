@@ -12,7 +12,7 @@ main.o: main.cpp
 travelstate.o: travelstate.cpp gamestate.h travelstate.h
 	$(GCC) $(FLAGS) -c travelstate.cpp -o travelstate.o
 
-idlestate.o: idlestate.cpp gamestate.h livingentity.h idlestate.h
+idlestate.o: idlestate.cpp gamestate.h idlestate.h
 	$(GCC) $(FLAGS) -c idlestate.cpp -o idlestate.o
 
 combatstate.o: combatstate.cpp gamestate.h combatstate.h
