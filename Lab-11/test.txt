@@ -1,0 +1,830 @@
+Blaine Mason
+
+You get attacked
+The enemy prepares to attack!
+1.) Attack the enemy.
+2.) Try to run away.
+1
+You attack the enemy...
+=================
+Player: John
+Health: 100 out of 100
+Dmg: 10
+=================
+=================
+Monster: Dragon
+Health: 140 out of 150
+Dmg: 5
+=================
+The enemy prepares to attack!
+1.) Attack the enemy.
+2.) Try to run away.
+1
+You attack the enemy...
+Oh No the monster attacks you!
+=================
+Player: John
+Health: 95 out of 100
+Dmg: 10
+=================
+=================
+Monster: Dragon
+Health: 140 out of 150
+Dmg: 5
+=================
+The enemy prepares to attack!
+1.) Attack the enemy.
+2.) Try to run away.
+1
+You attack the enemy...
+Oh No the monster attacks you!
+=================
+Player: John
+Health: 90 out of 100
+Dmg: 10
+=================
+=================
+Monster: Dragon
+Health: 140 out of 150
+Dmg: 5
+=================
+The enemy prepares to attack!
+1.) Attack the enemy.
+2.) Try to run away.
+1
+You attack the enemy...
+=================
+Player: John
+Health: 90 out of 100
+Dmg: 10
+=================
+=================
+Monster: Dragon
+Health: 130 out of 150
+Dmg: 5
+=================
+The enemy prepares to attack!
+1.) Attack the enemy.
+2.) Try to run away.
+1
+You attack the enemy...
+=================
+Player: John
+Health: 90 out of 100
+Dmg: 10
+=================
+=================
+Monster: Dragon
+Health: 120 out of 150
+Dmg: 5
+=================
+The enemy prepares to attack!
+1.) Attack the enemy.
+2.) Try to run away.
+1
+You attack the enemy...
+=================
+Player: John
+Health: 90 out of 100
+Dmg: 10
+=================
+=================
+Monster: Dragon
+Health: 110 out of 150
+Dmg: 5
+=================
+The enemy prepares to attack!
+1.) Attack the enemy.
+2.) Try to run away.
+1
+You attack the enemy...
+=================
+Player: John
+Health: 90 out of 100
+Dmg: 10
+=================
+=================
+Monster: Dragon
+Health: 100 out of 150
+Dmg: 5
+=================
+The enemy prepares to attack!
+1.) Attack the enemy.
+2.) Try to run away.
+1
+You attack the enemy...
+Oh No the monster attacks you!
+=================
+Player: John
+Health: 85 out of 100
+Dmg: 10
+=================
+=================
+Monster: Dragon
+Health: 100 out of 150
+Dmg: 5
+=================
+The enemy prepares to attack!
+1.) Attack the enemy.
+2.) Try to run away.
+1
+You attack the enemy...
+Oh No the monster attacks you!
+=================
+Player: John
+Health: 80 out of 100
+Dmg: 10
+=================
+=================
+Monster: Dragon
+Health: 100 out of 150
+Dmg: 5
+=================
+The enemy prepares to attack!
+1.) Attack the enemy.
+2.) Try to run away.
+2
+You attempt to flee from the fight...
+You successfully retreat from battle.
+=================
+Player: John
+Health: 80 out of 100
+Dmg: 10
+=================
+You are walking North
+You see a fork in the road, headed South
+1. Keep walking.
+2. Sit and rest.
+3. Take the South fork.
+2
+You are sitting at the side of the road
+
+1.) Keep sitting.
+2.) Get up and keep walking.
+1
+=================
+Player: John
+Health: 80 out of 100
+Dmg: 10
+=================
+You are sitting at the side of the road
+
+1.) Keep sitting.
+2.) Get up and keep walking.
+1
+=================
+Player: John
+Health: 90 out of 100
+Dmg: 10
+=================
+You are sitting at the side of the road
+
+1.) Keep sitting.
+2.) Get up and keep walking.
+1
+=================
+Player: John
+Health: 100 out of 100
+Dmg: 10
+=================
+You are sitting at the side of the road
+
+1.) Keep sitting.
+2.) Get up and keep walking.
+2
+You are walking North
+You see a fork in the road, headed South
+1. Keep walking.
+2. Sit and rest.
+3. Take the South fork.
+3
+
+You take the fork...
+You get attacked
+The enemy prepares to attack!
+1.) Attack the enemy.
+2.) Try to run away.
+1
+You attack the enemy...
+=================
+Player: John
+Health: 110 out of 100
+Dmg: 10
+=================
+=================
+Monster: Dragon
+Health: 140 out of 150
+Dmg: 5
+=================
+The enemy prepares to attack!
+1.) Attack the enemy.
+2.) Try to run away.
+1
+You attack the enemy...
+=================
+Player: John
+Health: 110 out of 100
+Dmg: 10
+=================
+=================
+Monster: Dragon
+Health: 130 out of 150
+Dmg: 5
+=================
+The enemy prepares to attack!
+1.) Attack the enemy.
+2.) Try to run away.
+1
+You attack the enemy...
+=================
+Player: John
+Health: 110 out of 100
+Dmg: 10
+=================
+=================
+Monster: Dragon
+Health: 120 out of 150
+Dmg: 5
+=================
+The enemy prepares to attack!
+1.) Attack the enemy.
+2.) Try to run away.
+1
+You attack the enemy...
+=================
+Player: John
+Health: 110 out of 100
+Dmg: 10
+=================
+=================
+Monster: Dragon
+Health: 110 out of 150
+Dmg: 5
+=================
+The enemy prepares to attack!
+1.) Attack the enemy.
+2.) Try to run away.
+1
+You attack the enemy...
+Oh No the monster attacks you!
+=================
+Player: John
+Health: 105 out of 100
+Dmg: 10
+=================
+=================
+Monster: Dragon
+Health: 110 out of 150
+Dmg: 5
+=================
+The enemy prepares to attack!
+1.) Attack the enemy.
+2.) Try to run away.
+1
+You attack the enemy...
+Oh No the monster attacks you!
+=================
+Player: John
+Health: 100 out of 100
+Dmg: 10
+=================
+=================
+Monster: Dragon
+Health: 110 out of 150
+Dmg: 5
+=================
+The enemy prepares to attack!
+1.) Attack the enemy.
+2.) Try to run away.
+1
+You attack the enemy...
+Oh No the monster attacks you!
+=================
+Player: John
+Health: 95 out of 100
+Dmg: 10
+=================
+=================
+Monster: Dragon
+Health: 110 out of 150
+Dmg: 5
+=================
+The enemy prepares to attack!
+1.) Attack the enemy.
+2.) Try to run away.
+1
+You attack the enemy...
+Oh No the monster attacks you!
+=================
+Player: John
+Health: 90 out of 100
+Dmg: 10
+=================
+=================
+Monster: Dragon
+Health: 110 out of 150
+Dmg: 5
+=================
+The enemy prepares to attack!
+1.) Attack the enemy.
+2.) Try to run away.
+1
+You attack the enemy...
+Oh No the monster attacks you!
+=================
+Player: John
+Health: 85 out of 100
+Dmg: 10
+=================
+=================
+Monster: Dragon
+Health: 110 out of 150
+Dmg: 5
+=================
+The enemy prepares to attack!
+1.) Attack the enemy.
+2.) Try to run away.
+1
+You attack the enemy...
+=================
+Player: John
+Health: 85 out of 100
+Dmg: 10
+=================
+=================
+Monster: Dragon
+Health: 100 out of 150
+Dmg: 5
+=================
+The enemy prepares to attack!
+1.) Attack the enemy.
+2.) Try to run away.
+1
+You attack the enemy...
+=================
+Player: John
+Health: 85 out of 100
+Dmg: 10
+=================
+=================
+Monster: Dragon
+Health: 90 out of 150
+Dmg: 5
+=================
+The enemy prepares to attack!
+1.) Attack the enemy.
+2.) Try to run away.
+1
+You attack the enemy...
+Oh No the monster attacks you!
+=================
+Player: John
+Health: 80 out of 100
+Dmg: 10
+=================
+=================
+Monster: Dragon
+Health: 90 out of 150
+Dmg: 5
+=================
+The enemy prepares to attack!
+1.) Attack the enemy.
+2.) Try to run away.
+1
+You attack the enemy...
+Oh No the monster attacks you!
+=================
+Player: John
+Health: 75 out of 100
+Dmg: 10
+=================
+=================
+Monster: Dragon
+Health: 90 out of 150
+Dmg: 5
+=================
+The enemy prepares to attack!
+1.) Attack the enemy.
+2.) Try to run away.
+1
+You attack the enemy...
+Oh No the monster attacks you!
+=================
+Player: John
+Health: 70 out of 100
+Dmg: 10
+=================
+=================
+Monster: Dragon
+Health: 90 out of 150
+Dmg: 5
+=================
+The enemy prepares to attack!
+1.) Attack the enemy.
+2.) Try to run away.
+1
+You attack the enemy...
+Oh No the monster attacks you!
+=================
+Player: John
+Health: 65 out of 100
+Dmg: 10
+=================
+=================
+Monster: Dragon
+Health: 90 out of 150
+Dmg: 5
+=================
+The enemy prepares to attack!
+1.) Attack the enemy.
+2.) Try to run away.
+1
+You attack the enemy...
+Oh No the monster attacks you!
+=================
+Player: John
+Health: 60 out of 100
+Dmg: 10
+=================
+=================
+Monster: Dragon
+Health: 90 out of 150
+Dmg: 5
+=================
+The enemy prepares to attack!
+1.) Attack the enemy.
+2.) Try to run away.
+1
+You attack the enemy...
+Oh No the monster attacks you!
+=================
+Player: John
+Health: 55 out of 100
+Dmg: 10
+=================
+=================
+Monster: Dragon
+Health: 90 out of 150
+Dmg: 5
+=================
+The enemy prepares to attack!
+1.) Attack the enemy.
+2.) Try to run away.
+1
+You attack the enemy...
+Oh No the monster attacks you!
+=================
+Player: John
+Health: 50 out of 100
+Dmg: 10
+=================
+=================
+Monster: Dragon
+Health: 90 out of 150
+Dmg: 5
+=================
+The enemy prepares to attack!
+1.) Attack the enemy.
+2.) Try to run away.
+1
+You attack the enemy...
+=================
+Player: John
+Health: 50 out of 100
+Dmg: 10
+=================
+=================
+Monster: Dragon
+Health: 80 out of 150
+Dmg: 5
+=================
+The enemy prepares to attack!
+1.) Attack the enemy.
+2.) Try to run away.
+1
+You attack the enemy...
+=================
+Player: John
+Health: 50 out of 100
+Dmg: 10
+=================
+=================
+Monster: Dragon
+Health: 70 out of 150
+Dmg: 5
+=================
+The enemy prepares to attack!
+1.) Attack the enemy.
+2.) Try to run away.
+1
+You attack the enemy...
+Oh No the monster attacks you!
+=================
+Player: John
+Health: 45 out of 100
+Dmg: 10
+=================
+=================
+Monster: Dragon
+Health: 70 out of 150
+Dmg: 5
+=================
+The enemy prepares to attack!
+1.) Attack the enemy.
+2.) Try to run away.
+1
+You attack the enemy...
+=================
+Player: John
+Health: 45 out of 100
+Dmg: 10
+=================
+=================
+Monster: Dragon
+Health: 60 out of 150
+Dmg: 5
+=================
+The enemy prepares to attack!
+1.) Attack the enemy.
+2.) Try to run away.
+1
+You attack the enemy...
+=================
+Player: John
+Health: 45 out of 100
+Dmg: 10
+=================
+=================
+Monster: Dragon
+Health: 50 out of 150
+Dmg: 5
+=================
+The enemy prepares to attack!
+1.) Attack the enemy.
+2.) Try to run away.
+1
+You attack the enemy...
+=================
+Player: John
+Health: 45 out of 100
+Dmg: 10
+=================
+=================
+Monster: Dragon
+Health: 40 out of 150
+Dmg: 5
+=================
+The enemy prepares to attack!
+1.) Attack the enemy.
+2.) Try to run away.
+1
+You attack the enemy...
+=================
+Player: John
+Health: 45 out of 100
+Dmg: 10
+=================
+=================
+Monster: Dragon
+Health: 30 out of 150
+Dmg: 5
+=================
+The enemy prepares to attack!
+1.) Attack the enemy.
+2.) Try to run away.
+1
+You attack the enemy...
+Oh No the monster attacks you!
+=================
+Player: John
+Health: 40 out of 100
+Dmg: 10
+=================
+=================
+Monster: Dragon
+Health: 30 out of 150
+Dmg: 5
+=================
+The enemy prepares to attack!
+1.) Attack the enemy.
+2.) Try to run away.
+1
+You attack the enemy...
+=================
+Player: John
+Health: 40 out of 100
+Dmg: 10
+=================
+=================
+Monster: Dragon
+Health: 20 out of 150
+Dmg: 5
+=================
+The enemy prepares to attack!
+1.) Attack the enemy.
+2.) Try to run away.
+1
+You attack the enemy...
+Oh No the monster attacks you!
+=================
+Player: John
+Health: 35 out of 100
+Dmg: 10
+=================
+=================
+Monster: Dragon
+Health: 20 out of 150
+Dmg: 5
+=================
+The enemy prepares to attack!
+1.) Attack the enemy.
+2.) Try to run away.
+1
+You attack the enemy...
+Oh No the monster attacks you!
+=================
+Player: John
+Health: 30 out of 100
+Dmg: 10
+=================
+=================
+Monster: Dragon
+Health: 20 out of 150
+Dmg: 5
+=================
+The enemy prepares to attack!
+1.) Attack the enemy.
+2.) Try to run away.
+1
+You attack the enemy...
+Oh No the monster attacks you!
+=================
+Player: John
+Health: 25 out of 100
+Dmg: 10
+=================
+=================
+Monster: Dragon
+Health: 20 out of 150
+Dmg: 5
+=================
+The enemy prepares to attack!
+1.) Attack the enemy.
+2.) Try to run away.
+1
+You attack the enemy...
+=================
+Player: John
+Health: 25 out of 100
+Dmg: 10
+=================
+=================
+Monster: Dragon
+Health: 10 out of 150
+Dmg: 5
+=================
+The enemy prepares to attack!
+1.) Attack the enemy.
+2.) Try to run away.
+1
+You attack the enemy...
+=================
+Player: John
+Health: 25 out of 100
+Dmg: 10
+=================
+=================
+Monster: Dragon
+Health: 0 out of 150
+Dmg: 5
+=================
+The enemy is dead!
+You are walking South
+1. Keep walking.
+2. Sit and rest.
+1
+
+You continue walking...
+You get attacked
+The enemy prepares to attack!
+1.) Attack the enemy.
+2.) Try to run away.
+2
+You attempt to flee from the fight...
+You successfully retreat from battle.
+=================
+Player: John
+Health: 25 out of 100
+Dmg: 10
+=================
+You are walking South
+1. Keep walking.
+2. Sit and rest.
+2
+You are sitting at the side of the road
+
+1.) Keep sitting.
+2.) Get up and keep walking.
+1
+=================
+Player: John
+Health: 25 out of 100
+Dmg: 10
+=================
+You are sitting at the side of the road
+
+1.) Keep sitting.
+2.) Get up and keep walking.
+1
+=================
+Player: John
+Health: 35 out of 100
+Dmg: 10
+=================
+You are sitting at the side of the road
+
+1.) Keep sitting.
+2.) Get up and keep walking.
+1
+=================
+Player: John
+Health: 45 out of 100
+Dmg: 10
+=================
+You are sitting at the side of the road
+
+1.) Keep sitting.
+2.) Get up and keep walking.
+1
+=================
+Player: John
+Health: 55 out of 100
+Dmg: 10
+=================
+You are sitting at the side of the road
+
+1.) Keep sitting.
+2.) Get up and keep walking.
+1
+=================
+Player: John
+Health: 65 out of 100
+Dmg: 10
+=================
+You are sitting at the side of the road
+
+1.) Keep sitting.
+2.) Get up and keep walking.
+1
+=================
+Player: John
+Health: 75 out of 100
+Dmg: 10
+=================
+You are sitting at the side of the road
+
+1.) Keep sitting.
+2.) Get up and keep walking.
+1
+=================
+Player: John
+Health: 85 out of 100
+Dmg: 10
+=================
+You are sitting at the side of the road
+
+1.) Keep sitting.
+2.) Get up and keep walking.
+1
+=================
+Player: John
+Health: 95 out of 100
+Dmg: 10
+=================
+You are sitting at the side of the road
+
+1.) Keep sitting.
+2.) Get up and keep walking.
+2
+You are walking South
+1. Keep walking.
+2. Sit and rest.
+1
+
+You continue walking...
+You are walking South
+You see a fork in the road, headed North
+1. Keep walking.
+2. Sit and rest.
+3. Take the North fork.
+2
+You are sitting at the side of the road
+
+1.) Keep sitting.
+2.) Get up and keep walking.
+2
+You are walking South
+You see a fork in the road, headed North
+1. Keep walking.
+2. Sit and rest.
+3. Take the North fork.
